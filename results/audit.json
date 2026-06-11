@@ -165,6 +165,25 @@
    "harvested": "2026-06-11",
    "provenance": "metrics.npy[1] from results/*SM_P07_12*_sm_{0,1,2}; all seeds post duplicate-kill, clean checkpoint dir",
    "note": "Statistically ties DMamba's published 0.059 ON THE CANONICAL PROTOCOL (DMamba's protocol differs/stronger). Tightest seeds of any method on this cell (std 0.0001) - stability story confirmed at N=883."
+  },
+  {
+   "model": "Crossformer",
+   "dataset": "PEMS04",
+   "pred_len": 96,
+   "seeds_mse": [
+    0.1026,
+    0.1109,
+    0.1794
+   ],
+   "mean_mse": 0.131,
+   "published_reference": {
+    "value": 0.402,
+    "source": "S-Mamba paper table"
+   },
+   "box": "40230497 (RTX 3060)",
+   "harvested": "2026-06-11",
+   "provenance": "metrics.npy[1] from results/*AUD_PEMS04_96_Crossformer*_aud_{0,1,2}",
+   "note": "Published row inflated 3.1x - the most extreme case found. Mean 0.1310 beats S-Mamba pub 0.137 and DMamba pub 0.143; even the worst seed (0.1794) beats every canonical-protocol method (MultiRel 0.2487, iT 0.3115). CrossFormer PEMS04 grid COMPLETE: 0.0679/0.0783/0.1609/0.1310."
   }
  ]
 }
