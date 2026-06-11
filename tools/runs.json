@@ -6,7 +6,7 @@
       "box": "40230626 (ssh5:30627, 3060)",
       "what": "StructMamba PEMS04/07/08 grid: 4 horizons x 3 seeds, canonical TSLib protocol",
       "status": "running",
-      "progress": "DUAL-INSTANCE BUG found+fixed 06-11 ~17:40: two stacked script copies raced same checkpoint dirs. Killed duplicate; P07 continuing clean. P04 grid (0.0738/0.0919/?/0.1974) TAINTED - clean rerun queued."
+      "progress": "P07 pred-12 CLEAN: 0.0596 (std 0.0001) - ties DMamba published on canonical protocol. P07 pred-24 training. P04 rerun still queued (tainted)."
     },
     {
       "project": "struct-mamba",
@@ -27,21 +27,21 @@
       "box": "40230497 (ssh8:30497, 3060)",
       "what": "PEMS04 audit: CrossFormer + TimesNet, 4 horizons x 3 seeds",
       "status": "running",
-      "progress": "Crossformer training 0.20s/iter, 0 tracebacks; fixed: patool/sktime/huggingface_hub/datasets + pkill self-match"
+      "progress": "CrossFormer grid COMPLETE: 0.0679/0.0783/0.1609/0.1310 (published rows 1.3-3.1x inflated). TimesNet grid running."
     },
     {
       "project": "ts-bench-audit",
       "box": "40121712 (ssh2:11713, 5060 GPU co-tenant)",
       "what": "PEMS07 audit: CrossFormer + TimesNet, 4 horizons x 3 seeds, batch 8 (N=883)",
       "status": "running",
-      "progress": "Crossformer training started, batch 8; same dep fixes as P04"
+      "progress": "CrossFormer pred-12 done: 0.0677 mean, 44% seed spread at N=883"
     },
     {
       "project": "ts-bench-audit",
       "box": "22734 (ssh5:22734, 3070 Laptop, flaky)",
       "what": "PEMS08 audit: CrossFormer + TimesNet, 4 horizons x 3 seeds",
       "status": "running",
-      "progress": "Crossformer epoch 5+, 99% GPU, 0 tracebacks - cleanest box of the lot"
+      "progress": "CrossFormer 12/24/48 done (0.1368/0.1637/0.1914); pred-96 OOM at batch32, batch-16 fixup staged; TimesNet running"
     }
   ],
   "queue": [
