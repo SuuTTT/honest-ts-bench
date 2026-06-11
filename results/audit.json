@@ -146,6 +146,25 @@
    "harvested": "2026-06-11",
    "provenance": "metrics.npy[1] from results/*AUD_PEMS07_12_Crossformer*_aud_{0,1,2}",
    "note": "44% seed spread at N=883 (0.0579-0.0836): large-N instability visible even at pred-12. Best seed would top the table (DMamba pub 0.059); mean 0.0677 sits behind MultiRel 0.0633. Published row inflated 28%."
+  },
+  {
+   "model": "StructMamba",
+   "dataset": "PEMS07",
+   "pred_len": 12,
+   "seeds_mse": [
+    0.0596,
+    0.0595,
+    0.0597
+   ],
+   "mean_mse": 0.0596,
+   "published_reference": {
+    "value": null,
+    "source": "ours; comparisons: DMamba pub 0.059, S-Mamba pub 0.063, MultiRel 0.0633, iT 0.0668, CrossFormer self-run 0.0677"
+   },
+   "box": "40230626 (RTX 3060)",
+   "harvested": "2026-06-11",
+   "provenance": "metrics.npy[1] from results/*SM_P07_12*_sm_{0,1,2}; all seeds post duplicate-kill, clean checkpoint dir",
+   "note": "Statistically ties DMamba's published 0.059 ON THE CANONICAL PROTOCOL (DMamba's protocol differs/stronger). Tightest seeds of any method on this cell (std 0.0001) - stability story confirmed at N=883."
   }
  ]
 }
