@@ -6,7 +6,7 @@
       "box": "40230626 (ssh5:30627, 3060)",
       "what": "StructMamba PEMS04/07/08 grid: 4 horizons x 3 seeds, canonical TSLib protocol",
       "status": "running",
-      "progress": "PEMS04 pred-12/24 done (0.0738 / 0.0919); pred-48/96 + PEMS07/08 remaining"
+      "progress": "DUAL-INSTANCE BUG found+fixed 06-11 ~17:40: two stacked script copies raced same checkpoint dirs. Killed duplicate; P07 continuing clean. P04 grid (0.0738/0.0919/?/0.1974) TAINTED - clean rerun queued."
     },
     {
       "project": "struct-mamba",
@@ -45,6 +45,12 @@
     }
   ],
   "queue": [
+    {
+      "project": "struct-mamba",
+      "what": "CLEAN RERUN: StructMamba PEMS04 grid (4 horizons x 3 seeds) - prior results contaminated by dual-instance checkpoint races",
+      "target_boxes": "first free box (P08 audit box likely first)",
+      "blocked_on": "current grids"
+    },
     {
       "project": "ts-bench-audit",
       "what": "S-Mamba + DMamba self-runs under canonical protocol (verify code availability first)",
