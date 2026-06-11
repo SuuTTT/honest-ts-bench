@@ -42,6 +42,24 @@
    "harvested": "2026-06-11",
    "provenance": "metrics.npy[1] from results/*AUD_PEMS04_12_Crossformer*_aud_{0,1,2}",
    "note": "Beats every method on this cell incl. StructMamba 0.0738, DMamba published 0.074, S-Mamba published 0.076 - self-run 2023 baseline tops the 2026 'SOTA' table"
+  },
+  {
+   "model": "Crossformer",
+   "dataset": "PEMS08",
+   "pred_len": 24,
+   "seeds_mse": [
+    0.1617,
+    0.1707,
+    0.1588
+   ],
+   "mean_mse": 0.1637,
+   "published_reference": {
+    "value": 0.215,
+    "source": "S-Mamba paper table"
+   },
+   "box": "22734 (RTX 3070 Laptop)",
+   "harvested": "2026-06-11",
+   "provenance": "metrics.npy[1] from results/*AUD_PEMS08_24_Crossformer*_aud_{0,1,2}"
   }
  ]
 }
