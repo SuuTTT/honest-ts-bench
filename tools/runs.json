@@ -1,41 +1,67 @@
 {
-  "_comment": "Manually maintained run + queue registry. update_dashboard.py merges this with live GPU probes into docs/assets/dashboard.json.",
+  "_comment": "Manually maintained run + queue registry. live_dashboard.py rereads this every probe cycle.",
   "runs": [
     {
       "project": "struct-mamba",
-      "box": "40230626 (ssh5:30627, A4000)",
+      "box": "40230626 (ssh5:30627, 3060)",
       "what": "StructMamba PEMS04/07/08 grid: 4 horizons x 3 seeds, canonical TSLib protocol",
       "status": "running",
-      "progress": "PEMS04 pred-12/24 done (0.0738 / 0.0919); pred-48/96 + PEMS07/08 remaining",
-      "log": "/root/structmamba.log"
+      "progress": "PEMS04 pred-12/24 done (0.0738 / 0.0919); pred-48/96 + PEMS07/08 remaining"
     },
     {
       "project": "struct-mamba",
-      "box": "40424707 (ssh1:24707)",
-      "what": "StructMamba PEMS03 grid: 4 horizons x 3 seeds",
+      "box": "40424707 (ssh1:24707, 3060)",
+      "what": "StructMamba PEMS03 grid",
       "status": "done",
-      "progress": "MSE 0.0635 / 0.0839 / 0.1247 / 0.1878 (pred-12/24/48/96) - beats S-Mamba published at every horizon",
-      "log": "/root/sm_pems03.log"
+      "progress": "0.0635 / 0.0839 / 0.1247 / 0.1878 - beats S-Mamba published at every horizon. Blog: milestone 1"
+    },
+    {
+      "project": "ts-bench-audit",
+      "box": "40424707 (ssh1:24707, 3060)",
+      "what": "PEMS03 audit: CrossFormer + TimesNet, 4 horizons x 3 seeds, canonical protocol",
+      "status": "running",
+      "progress": "launched 06-11 (restarted after disk cleanup + reformer_pytorch install)"
+    },
+    {
+      "project": "ts-bench-audit",
+      "box": "40230497 (ssh8:30497, 3060)",
+      "what": "PEMS04 audit: CrossFormer + TimesNet, 4 horizons x 3 seeds",
+      "status": "running",
+      "progress": "launched 06-11 (restarted after patool/sktime install)"
+    },
+    {
+      "project": "ts-bench-audit",
+      "box": "40121712 (ssh2:11713, 5060 GPU co-tenant)",
+      "what": "PEMS07 audit: CrossFormer + TimesNet, 4 horizons x 3 seeds, batch 8 (N=883)",
+      "status": "running",
+      "progress": "launched 06-11; num_workers=4 to leave CPUs for mahjong eval"
+    },
+    {
+      "project": "ts-bench-audit",
+      "box": "22734 (ssh5:22734, 3070 Laptop, flaky)",
+      "what": "PEMS08 audit: CrossFormer + TimesNet, 4 horizons x 3 seeds",
+      "status": "running",
+      "progress": "launched 06-11, clean from first start; setsid-detached so SSH drops are harmless"
     }
   ],
   "queue": [
     {
       "project": "ts-bench-audit",
-      "what": "Phase 1: self-run CrossFormer, S-Mamba, DMamba, PatchTST, TimesNet, DLinear under ONE canonical protocol (TSLib seq-96, 3 seeds) on PEMS03/04/07/08 x 4 horizons",
-      "target_boxes": "40230497 (3060), 40121712 (5060 GPU co-tenant), 22734 (3070, short runs only)",
-      "blocked_on": "staging audit scripts; verify S-Mamba/DMamba code availability"
+      "what": "S-Mamba + DMamba self-runs under canonical protocol (verify code availability first)",
+      "target_boxes": "first box to finish its audit grid",
+      "blocked_on": "current audit grids"
     },
     {
       "project": "struct-mamba",
-      "what": "Phase 2 ablations: SE-ordered scan, hierarchical SE masks, SE-adaptive k (PEMS04+08, pred-12/96, 3 seeds per variant)",
-      "target_boxes": "free box after PEMS grid completes",
-      "blocked_on": "Phase 1 baseline numbers"
+      "what": "Phase 2 ablations: SE-ordered scan, hierarchical SE masks, SE-adaptive k (PEMS04+08, pred-12/96)",
+      "target_boxes": "40230626 after StructMamba grid completes",
+      "blocked_on": "StructMamba PEMS04/07/08 grid"
     },
     {
       "project": "ts-bench-audit",
-      "what": "Protocol-inflation axis: rerun top-3 methods at their published configs to quantify config vs architecture effects",
+      "what": "Protocol-inflation axis: rerun top-3 methods at their published configs",
       "target_boxes": "TBD",
-      "blocked_on": "Phase 1"
+      "blocked_on": "Phase 1 canonical numbers"
     }
   ]
 }
