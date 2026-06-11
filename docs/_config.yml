@@ -1,0 +1,24 @@
+theme: minima
+title: honest-ts-bench
+description: >-
+  Honest benchmarking for long-horizon time-series forecasting: a taxonomy of
+  benchmark-integrity failures (stale copied baselines, protocol heterogeneity,
+  test leakage, seed cherry-picking), the critique literature, and a
+  single-protocol re-benchmark of recent PEMS forecasters with per-seed results.
+baseurl: "/honest-ts-bench"
+url: "https://suuttt.github.io"
+
+header_pages:
+  - pitfalls.md
+  - literature.md
+  - case-study-pems.md
+
+minima:
+  nav_pages:
+    - pitfalls.md
+    - literature.md
+    - case-study-pems.md
+
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag
