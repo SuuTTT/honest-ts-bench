@@ -20,28 +20,28 @@
       "box": "40424707 (ssh1:24707, 3060)",
       "what": "PEMS03 audit: CrossFormer + TimesNet, 4 horizons x 3 seeds, canonical protocol",
       "status": "running",
-      "progress": "launched 06-11 (restarted after disk cleanup + reformer_pytorch install)"
+      "progress": "Crossformer pred-12 training (1.45s/iter); fixed: python3, reformer_pytorch, --freq m, disk cleanup"
     },
     {
       "project": "ts-bench-audit",
       "box": "40230497 (ssh8:30497, 3060)",
       "what": "PEMS04 audit: CrossFormer + TimesNet, 4 horizons x 3 seeds",
       "status": "running",
-      "progress": "launched 06-11 (restarted after patool/sktime install)"
+      "progress": "Crossformer training 0.20s/iter, 0 tracebacks; fixed: patool/sktime/huggingface_hub/datasets + pkill self-match"
     },
     {
       "project": "ts-bench-audit",
       "box": "40121712 (ssh2:11713, 5060 GPU co-tenant)",
       "what": "PEMS07 audit: CrossFormer + TimesNet, 4 horizons x 3 seeds, batch 8 (N=883)",
       "status": "running",
-      "progress": "launched 06-11; num_workers=4 to leave CPUs for mahjong eval"
+      "progress": "Crossformer training started, batch 8; same dep fixes as P04"
     },
     {
       "project": "ts-bench-audit",
       "box": "22734 (ssh5:22734, 3070 Laptop, flaky)",
       "what": "PEMS08 audit: CrossFormer + TimesNet, 4 horizons x 3 seeds",
       "status": "running",
-      "progress": "launched 06-11, clean from first start; setsid-detached so SSH drops are harmless"
+      "progress": "Crossformer epoch 5+, 99% GPU, 0 tracebacks - cleanest box of the lot"
     }
   ],
   "queue": [
