@@ -98,6 +98,35 @@
    "harvested": "2026-06-11",
    "provenance": "metrics.npy[1] from results/*AUD_PEMS04_48_Crossformer*_aud_{0,1,2}",
    "note": "HIGH SEED VARIANCE (0.129-0.207, 60% spread) - instability at longer horizon. Mean 0.1609 vs MultiRel 0.1589: CrossFormer's short-horizon lead vanishes at pred-48. Worst seed matches the published row, suggesting published value may be a single bad run."
+  },
+  {
+   "model": "Crossformer",
+   "dataset": "PEMS08",
+   "pred_len": 48,
+   "seeds_mse": [
+    0.1928,
+    0.1963,
+    0.1852
+   ],
+   "mean_mse": 0.1914,
+   "published_reference": {
+    "value": 0.315,
+    "source": "S-Mamba paper table"
+   },
+   "box": "22734 (RTX 3070 Laptop)",
+   "harvested": "2026-06-11",
+   "provenance": "metrics.npy[1] from results/*AUD_PEMS08_48_Crossformer*_aud_{0,1,2}",
+   "note": "Published row inflated 39%. vs MultiRel 0.1807, iT 0.2011."
+  },
+  {
+   "model": "Crossformer",
+   "dataset": "PEMS08",
+   "pred_len": 96,
+   "seeds_mse": null,
+   "mean_mse": null,
+   "status": "OOM at batch 32 on 8GB RTX 3070 (forward pass, TwoStageAttention); batch-16 retry staged (fixup_P08.sh), runs after TimesNet grid",
+   "box": "22734 (RTX 3070 Laptop)",
+   "harvested": "2026-06-11"
   }
  ]
 }
