@@ -127,6 +127,25 @@
    "status": "OOM at batch 32 on 8GB RTX 3070 (forward pass, TwoStageAttention); batch-16 retry staged (fixup_P08.sh), runs after TimesNet grid",
    "box": "22734 (RTX 3070 Laptop)",
    "harvested": "2026-06-11"
+  },
+  {
+   "model": "Crossformer",
+   "dataset": "PEMS07",
+   "pred_len": 12,
+   "seeds_mse": [
+    0.0617,
+    0.0836,
+    0.0579
+   ],
+   "mean_mse": 0.0677,
+   "published_reference": {
+    "value": 0.094,
+    "source": "S-Mamba paper table"
+   },
+   "box": "40121712 (RTX 5060)",
+   "harvested": "2026-06-11",
+   "provenance": "metrics.npy[1] from results/*AUD_PEMS07_12_Crossformer*_aud_{0,1,2}",
+   "note": "44% seed spread at N=883 (0.0579-0.0836): large-N instability visible even at pred-12. Best seed would top the table (DMamba pub 0.059); mean 0.0677 sits behind MultiRel 0.0633. Published row inflated 28%."
   }
  ]
 }
