@@ -54,6 +54,12 @@
   "queue": [
     {
       "project": "ts-bench-audit",
+      "what": "S-Mamba PEMS03/07/08 grids, both regimes (published d1024/e4 + canonical d256/e3) - dual-GPU parallel",
+      "target_boxes": "40680574 (ssh4:10574, A4000 x2) - provisioning, ssh not up yet",
+      "blocked_on": "box boot"
+    },
+    {
+      "project": "ts-bench-audit",
       "what": "S-Mamba + DMamba self-runs under canonical protocol (verify code availability first)",
       "target_boxes": "first box to finish its audit grid",
       "blocked_on": "current audit grids"
