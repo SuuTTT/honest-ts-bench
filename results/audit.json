@@ -557,6 +557,26 @@
    "harvested": "2026-06-12",
    "provenance": "metrics.npy[1] from SDMamba/results/SMPUB_P04_12_*_{0,1,2}; their script verbatim, itr 1->3",
    "note": "REPRODUCES (0.0726 vs published 0.076, slightly better). But even at 4x width it loses the cell to canonical-protocol CrossFormer (0.0679). Canonical-config S-Mamba regime runs next."
+  },
+  {
+   "model": "iTransformer",
+   "dataset": "PEMS04",
+   "pred_len": 12,
+   "config": "INTERMEDIATE capacity probe (e4/d512/lr1e-3) - NOT the official published config (which is d1024/e4/lr5e-4)",
+   "seeds_mse": [
+    0.0885,
+    0.0877,
+    0.088
+   ],
+   "mean_mse": 0.0881,
+   "published_reference": {
+    "value": 0.078,
+    "source": "iTransformer paper row as cited by DMamba"
+   },
+   "box": "40680574 GPU1 (A4000)",
+   "harvested": "2026-06-12",
+   "provenance": "metrics.npy[1] from TSLibAudit/results/*ITPUB_PEMS04_12*_aud_{0,1,2}",
+   "note": "Key negative: doubling d_model 256->512 changes nothing (0.0881 vs canonical 0.0887). The published 0.078 must come from d1024 and/or lr - exact-official-script reruns (tag ITP) launched to test."
   }
  ]
 }
