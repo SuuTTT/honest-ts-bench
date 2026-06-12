@@ -597,6 +597,35 @@
    "harvested": "2026-06-12",
    "provenance": "metrics.npy[1] from TSLibAudit/results/*ITPUB_P03_12*_aud_{0,1,2}",
    "note": "Three-way agreement at short horizon: published 0.071 = canonical d256 0.0694 = published-config 0.0692. iT protocol inflation is a LONG-horizon phenomenon (published 0.164 vs canonical 0.2755 at pred-96) - those cells are queued on this box."
+  },
+  {
+   "model": "Crossformer",
+   "dataset": "PEMS07",
+   "pred_len": 48,
+   "seeds_mse": [
+    0.2022,
+    0.2209,
+    0.1892
+   ],
+   "mean_mse": 0.2041,
+   "published_reference": {
+    "value": 0.311,
+    "source": "S-Mamba paper table"
+   },
+   "box": "40121712 (RTX 5060)",
+   "harvested": "2026-06-12",
+   "provenance": "metrics.npy[1] from results/*AUD_PEMS07_48_Crossformer*_aud_{0,1,2}",
+   "note": "Published inflated 1.5x; still far behind StructMamba 0.1185 / MultiRel 0.1356 at N=883."
+  },
+  {
+   "model": "Crossformer",
+   "dataset": "PEMS07",
+   "pred_len": 96,
+   "seeds_mse": null,
+   "mean_mse": null,
+   "status": "OOM at batch 8 on 8GB RTX 5060; batch-4 retry staged (fixup_P07.sh) after TimesNet grid",
+   "box": "40121712 (RTX 5060)",
+   "harvested": "2026-06-12"
   }
  ]
 }
