@@ -764,6 +764,109 @@
    "harvested": "2026-06-12",
    "provenance": "metrics.npy[1] from TSLibAudit/results/*ITPUB_P03_96*_aud_{0,1,2}",
    "note": "DIVERGED 3/3 SEEDS (MSE>1.0). Naive capacity scaling at lr1e-3 catastrophically unstable at long horizon - exactly the Limitation-3 instability the MultiRel/StructMamba stability analysis predicts. The published 0.164 therefore requires the official script's per-horizon lr1e-4/e5 settings; exact-script verification staged (ITEX). Canonical d256 converges fine (0.2755)."
+  },
+  {
+   "model": "iTransformer",
+   "dataset": "PEMS04",
+   "pred_len": 12,
+   "config": "EXACT official script (ITP tag)",
+   "seeds_mse": [
+    0.0884,
+    0.088,
+    0.0896
+   ],
+   "mean_mse": 0.0887,
+   "published_reference": {
+    "value": 0.078,
+    "source": "iTransformer paper row"
+   },
+   "box": "40680574 GPU1 (A4000)",
+   "harvested": "2026-06-12",
+   "provenance": "metrics.npy[1] from TSLibAudit/results/*ITP_PEMS04_12*; config verified in result dirname (dm1024_el4_df1024)",
+   "note": "EXACT official script (d1024/e4/lr5e-4/use_norm0, dirname-verified) DOES NOT REPRODUCE published row. Identical to canonical d256 (0.0887) - capacity contributes nothing on PEMS04 either."
+  },
+  {
+   "model": "iTransformer",
+   "dataset": "PEMS04",
+   "pred_len": 24,
+   "config": "EXACT official script (ITP tag)",
+   "seeds_mse": [
+    0.1246,
+    0.125,
+    0.1236
+   ],
+   "mean_mse": 0.1244,
+   "published_reference": {
+    "value": 0.095,
+    "source": "iTransformer paper row"
+   },
+   "box": "40680574 GPU1 (A4000)",
+   "harvested": "2026-06-12",
+   "provenance": "metrics.npy[1] from TSLibAudit/results/*ITP_PEMS04_24*; config verified in result dirname (dm1024_el4_df1024)",
+   "note": "EXACT official script (d1024/e4/lr5e-4/use_norm0, dirname-verified) DOES NOT REPRODUCE published row."
+  },
+  {
+   "model": "iTransformer",
+   "dataset": "PEMS04",
+   "pred_len": 48,
+   "config": "EXACT official script (ITP tag)",
+   "seeds_mse": [
+    0.1981,
+    0.1947,
+    0.1964
+   ],
+   "mean_mse": 0.1964,
+   "published_reference": {
+    "value": 0.12,
+    "source": "iTransformer paper row"
+   },
+   "box": "40680574 GPU1 (A4000)",
+   "harvested": "2026-06-12",
+   "provenance": "metrics.npy[1] from TSLibAudit/results/*ITP_PEMS04_48*; config verified in result dirname (dm1024_el4_df1024)",
+   "note": "EXACT official script (d1024/e4/lr5e-4/use_norm0, dirname-verified) DOES NOT REPRODUCE published row."
+  },
+  {
+   "model": "iTransformer",
+   "dataset": "PEMS04",
+   "pred_len": 96,
+   "config": "EXACT official script (ITP tag)",
+   "seeds_mse": [
+    0.3109,
+    0.7087,
+    0.3278
+   ],
+   "mean_mse": 0.4491,
+   "published_reference": {
+    "value": 0.15,
+    "source": "iTransformer paper row"
+   },
+   "box": "40680574 GPU1 (A4000)",
+   "harvested": "2026-06-12",
+   "provenance": "metrics.npy[1] from TSLibAudit/results/*ITP_PEMS04_96*; config verified in result dirname (dm1024_el4_df1024)",
+   "note": "EXACT official script (d1024/e4/lr5e-4/use_norm0, dirname-verified) DOES NOT REPRODUCE published row. One seed diverged (0.709). Official config WORSE than canonical d256 (0.3115) at this horizon."
+  },
+  {
+   "model": "iTransformer",
+   "dataset": "PEMS07",
+   "pred_len": 12,
+   "config": "EXACT official script",
+   "seeds_mse": [
+    0.0681,
+    0.0677,
+    0.0679
+   ],
+   "mean_mse": 0.0679,
+   "published_reference": {
+    "value": 0.067,
+    "source": "iTransformer paper row"
+   },
+   "box": "40680574 GPU1 (A4000)",
+   "harvested": "2026-06-12",
+   "provenance": "metrics.npy[1] from TSLibAudit/results/*ITP_PEMS07_12*",
+   "note": "Reproduces (0.0679 vs 0.067) - PEMS07 short-horizon row is honest; the failure is PEMS04-specific so far."
   }
+ ],
+ "methodology_notes": [
+  "drop_last check (2026-06-12): our audit tree evaluates drop_last=False (post-TFB); SDMamba evaluates batch_size=1 at test where its drop_last=True is harmless. Both pipelines cover every test window - S-Mamba reproductions and our canonical numbers are directly comparable. The iTransformer PEMS04 non-reproduction is NOT explained by the drop_last bug."
  ]
 }
