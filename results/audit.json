@@ -317,6 +317,25 @@
    "harvested": "2026-06-12",
    "provenance": "metrics.npy[1] from results/*AUD_PEMS07_24_Crossformer*_aud_{0,1,2}",
    "note": "First cell where published row matches self-run mean (0.139 vs 0.1358). 43% seed spread persists. At N=883 CrossFormer collapses: StructMamba 0.0817 / MultiRel 0.0890 far ahead."
+  },
+  {
+   "model": "TimesNet",
+   "dataset": "PEMS08",
+   "pred_len": 12,
+   "seeds_mse": [
+    0.1155,
+    0.1234,
+    0.1211
+   ],
+   "mean_mse": 0.12,
+   "published_reference": {
+    "value": 0.112,
+    "source": "S-Mamba paper table"
+   },
+   "box": "22734 (RTX 3070 Laptop)",
+   "harvested": "2026-06-12",
+   "provenance": "metrics.npy[1] from results/*AUD_PEMS08_12_TimesNet*_aud_{0,1,2}",
+   "note": "First DEFLATION case: published (0.112) slightly better than self-run mean (0.1200, -7%) - within seed noise. TimesNet's published rows look roughly honest, unlike CrossFormer's. Audit reports both directions."
   }
  ]
 }
