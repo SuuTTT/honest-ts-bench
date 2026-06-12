@@ -963,6 +963,26 @@
    "harvested": "2026-06-12",
    "provenance": "metrics.npy[1] from TSLibAudit/results/*ITP_PEMS07_48*",
    "note": "DIVERGED 3/3 SEEDS at N=883 with iT's OWN official config - second adversarial divergence (after PEMS03-96 d512). Published 0.110 unreachable; canonical d256 converges stably (0.1572). Full-attention instability at scale, exactly as the StructMamba/MultiRel stability analysis predicts."
+  },
+  {
+   "model": "S-Mamba",
+   "dataset": "PEMS04",
+   "pred_len": 48,
+   "config": "CANONICAL (d256/e3/lr1e-3/batch16/RevIN)",
+   "seeds_mse": [
+    0.1457,
+    0.1449,
+    0.1443
+   ],
+   "mean_mse": 0.145,
+   "published_reference": {
+    "value": 0.115,
+    "source": "S-Mamba paper (tuned config)"
+   },
+   "box": "40230626 (RTX 3060)",
+   "harvested": "2026-06-12",
+   "provenance": "metrics.npy[1] from SDMamba/results/SMCAN_P04_48_*_{0,1,2}",
+   "note": "DECISIVE: capacity/tuning premium 31% at pred-48 (pub-config 0.1006 vs canonical 0.1450); premium ladder 6%/17%/31% across horizons. Same-budget: StructMamba 0.1297 WINS by 11%, then S-Mamba 0.1450 < MultiRel 0.1589 < CrossFormer 0.1609 < iT 0.1988. The published Mamba long-horizon advantage is substantially a capacity artifact."
   }
  ],
  "methodology_notes": [
