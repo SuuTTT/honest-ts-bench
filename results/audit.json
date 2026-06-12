@@ -724,6 +724,26 @@
    "harvested": "2026-06-12",
    "provenance": "metrics.npy[1] from SDMamba/results/SMPUB_P04_48_*_{0,1,2}",
    "note": "Reproduces favorably (0.1006 vs pub 0.115). FIRST CELL where Mamba genuinely leads with verified numbers: beats DMamba pub 0.113, StructMamba 0.1297, CrossFormer 0.1609. Canonical-config row pending to decompose capacity vs architecture."
+  },
+  {
+   "model": "iTransformer",
+   "dataset": "PEMS03",
+   "pred_len": 48,
+   "config": "published-style e4/d512/lr1e-3 (fixed across horizons)",
+   "seeds_mse": [
+    0.1658,
+    0.1595,
+    0.1664
+   ],
+   "mean_mse": 0.1639,
+   "published_reference": {
+    "value": 0.125,
+    "source": "iTransformer paper row"
+   },
+   "box": "40230645 (Quadro P4000)",
+   "harvested": "2026-06-12",
+   "provenance": "metrics.npy[1] from TSLibAudit/results/*ITPUB_P03_48*_aud_{0,1,2}",
+   "note": "Capacity does NOTHING at pred-48 (canonical 0.1651 -> d512/e4 0.1639) yet published row is 0.125. The 24% residual gap must be per-horizon tuning (official script mixes e5/lr1e-4) or non-reproducibility - exact-script blocks staged on this box."
   }
  ]
 }
