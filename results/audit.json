@@ -184,6 +184,25 @@
    "harvested": "2026-06-11",
    "provenance": "metrics.npy[1] from results/*AUD_PEMS04_96_Crossformer*_aud_{0,1,2}",
    "note": "Published row inflated 3.1x - the most extreme case found. Mean 0.1310 beats S-Mamba pub 0.137 and DMamba pub 0.143; even the worst seed (0.1794) beats every canonical-protocol method (MultiRel 0.2487, iT 0.3115). CrossFormer PEMS04 grid COMPLETE: 0.0679/0.0783/0.1609/0.1310."
+  },
+  {
+   "model": "StructMamba",
+   "dataset": "PEMS07",
+   "pred_len": 24,
+   "seeds_mse": [
+    0.0815,
+    0.0816,
+    0.0821
+   ],
+   "mean_mse": 0.0817,
+   "published_reference": {
+    "value": null,
+    "source": "ours; comparisons: DMamba pub 0.077, S-Mamba pub 0.081, MultiRel 0.0890, iT 0.0969"
+   },
+   "box": "40230626 (RTX 3060)",
+   "harvested": "2026-06-12",
+   "provenance": "metrics.npy[1] from results/*SM_P07_24*_sm_{0,1,2}; clean post-duplicate-kill",
+   "note": "Ties S-Mamba published (0.081) on canonical protocol; DMamba pub 0.077 ahead by ~6%. std 0.0003."
   }
  ]
 }
