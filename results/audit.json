@@ -646,6 +646,25 @@
    "harvested": "2026-06-12",
    "provenance": "metrics.npy[1] from SDMamba/results/SMPUB_P04_24_*_{0,1,2}",
    "note": "Exact reproduction (0.0843 vs 0.084). vs canonical-protocol: CrossFormer 0.0783 still wins the cell; StructMamba 0.0919."
+  },
+  {
+   "model": "TimesNet",
+   "dataset": "PEMS08",
+   "pred_len": 24,
+   "seeds_mse": [
+    0.1606,
+    0.1657,
+    0.1586
+   ],
+   "mean_mse": 0.1616,
+   "published_reference": {
+    "value": 0.141,
+    "source": "S-Mamba paper table"
+   },
+   "box": "22734 (RTX 3070 Laptop)",
+   "harvested": "2026-06-12",
+   "provenance": "metrics.npy[1] from results/*AUD_PEMS08_24_TimesNet*_aud_{0,1,2}",
+   "note": "Published favorable by 13% - TimesNet's cited rows consistently at or better than canonical reproduction (4th case)."
   }
  ]
 }
