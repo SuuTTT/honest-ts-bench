@@ -5,8 +5,8 @@
       "project": "struct-mamba",
       "box": "40230626 (ssh5:30627, 3060)",
       "what": "StructMamba PEMS04/07/08 grid: 4 horizons x 3 seeds, canonical TSLib protocol",
-      "status": "running",
-      "progress": "P07 pred-12 CLEAN: 0.0596 (std 0.0001) - ties DMamba published on canonical protocol. P07 pred-24 training. P04 rerun still queued (tainted)."
+      "status": "done",
+      "progress": "GRID COMPLETE 06-12. Clean: P07 0.0596/0.0817/0.1185/0.1733, P08 0.0738/0.1024/0.1636/0.3026. P04 clean rerun NOW RUNNING on same box (rerun_p04.log)."
     },
     {
       "project": "struct-mamba",
@@ -42,15 +42,16 @@
       "what": "PEMS08 audit: CrossFormer + TimesNet, 4 horizons x 3 seeds",
       "status": "running",
       "progress": "CrossFormer 12/24/48 done (0.1368/0.1637/0.1914); pred-96 OOM at batch32, batch-16 fixup staged; TimesNet running"
+    },
+    {
+      "project": "struct-mamba",
+      "box": "40230626 (ssh5:30627, 3060)",
+      "what": "StructMamba PEMS04 CLEAN RERUN (replaces dual-instance-tainted grid)",
+      "status": "running",
+      "progress": "launched 06-12, single instance verified, 0.066s/iter"
     }
   ],
   "queue": [
-    {
-      "project": "struct-mamba",
-      "what": "CLEAN RERUN: StructMamba PEMS04 grid (4 horizons x 3 seeds) - prior results contaminated by dual-instance checkpoint races",
-      "target_boxes": "first free box (P08 audit box likely first)",
-      "blocked_on": "current grids"
-    },
     {
       "project": "ts-bench-audit",
       "what": "S-Mamba + DMamba self-runs under canonical protocol (verify code availability first)",
