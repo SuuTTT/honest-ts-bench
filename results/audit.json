@@ -298,6 +298,25 @@
    "harvested": "2026-06-12",
    "provenance": "metrics.npy[1] from results/*SM_P07_48*_sm_{0,1,2}; clean",
    "note": "Well ahead of canonical baselines; behind Mamba published rows at this horizon (their protocol is stronger)."
+  },
+  {
+   "model": "Crossformer",
+   "dataset": "PEMS07",
+   "pred_len": 24,
+   "seeds_mse": [
+    0.1114,
+    0.1597,
+    0.1364
+   ],
+   "mean_mse": 0.1358,
+   "published_reference": {
+    "value": 0.139,
+    "source": "S-Mamba paper table"
+   },
+   "box": "40121712 (RTX 5060)",
+   "harvested": "2026-06-12",
+   "provenance": "metrics.npy[1] from results/*AUD_PEMS07_24_Crossformer*_aud_{0,1,2}",
+   "note": "First cell where published row matches self-run mean (0.139 vs 0.1358). 43% seed spread persists. At N=883 CrossFormer collapses: StructMamba 0.0817 / MultiRel 0.0890 far ahead."
   }
  ]
 }
