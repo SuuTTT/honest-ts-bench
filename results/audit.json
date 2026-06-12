@@ -665,6 +665,26 @@
    "harvested": "2026-06-12",
    "provenance": "metrics.npy[1] from results/*AUD_PEMS08_24_TimesNet*_aud_{0,1,2}",
    "note": "Published favorable by 13% - TimesNet's cited rows consistently at or better than canonical reproduction (4th case)."
+  },
+  {
+   "model": "iTransformer",
+   "dataset": "PEMS03",
+   "pred_len": 24,
+   "config": "published-style e4/d512/lr1e-3 (fixed across horizons)",
+   "seeds_mse": [
+    0.0973,
+    0.0974,
+    0.0968
+   ],
+   "mean_mse": 0.0972,
+   "published_reference": {
+    "value": 0.093,
+    "source": "iTransformer paper row"
+   },
+   "box": "40230645 (Quadro P4000)",
+   "harvested": "2026-06-12",
+   "provenance": "metrics.npy[1] from TSLibAudit/results/*ITPUB_P03_24*_aud_{0,1,2}",
+   "note": "Capacity decomposition: canonical d256 0.1002 -> d512/e4 0.0972 -> published 0.093. Capacity explains ~half the published gap at pred-24; per-horizon lr/e5 tuning presumably the rest (exact-script runs queued on dual-A4000)."
   }
  ]
 }
