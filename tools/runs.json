@@ -40,8 +40,8 @@
       "project": "ts-bench-audit",
       "box": "40230626 (ssh5:30627, 3060)",
       "what": "S-Mamba PEMS04, TWO regimes: published config (d1024/e4/lr3e-4, itr3) + canonical (d256/e3/lr1e-3)",
-      "status": "running",
-      "progress": "launched 06-12 after env saga (torch restore, ABI wheels, numpy2 patches); published-regime training"
+      "status": "done",
+      "progress": "COMPLETE: pub 0.0726/0.0843/0.1006/0.1235 (reproduces paper), canonical 0.0770/0.0987/0.1450/0.2240 (premium 6/17/31/81%). StructMamba sweeps same-budget. Blog #5 published. Refill: S-Mamba P07/08 running."
     },
     {
       "project": "ts-bench-audit",
@@ -63,6 +63,13 @@
       "what": "iTransformer PUBLISHED config (e4/d512) PEMS04+07+08 grids - protocol-inflation axis",
       "status": "running",
       "progress": "launched 06-12; same co-tenant priority machinery"
+    },
+    {
+      "project": "ts-bench-audit",
+      "box": "40230626 (ssh5:30627, 3060)",
+      "what": "S-Mamba PEMS07+08 two-regime grids (refill chain)",
+      "status": "running",
+      "progress": "started via refill.sh after P04; disk-full incident resolved (100%->39%, metrics preserved)"
     }
   ],
   "queue": [
