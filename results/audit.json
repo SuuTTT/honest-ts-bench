@@ -744,6 +744,26 @@
    "harvested": "2026-06-12",
    "provenance": "metrics.npy[1] from TSLibAudit/results/*ITPUB_P03_48*_aud_{0,1,2}",
    "note": "Capacity does NOTHING at pred-48 (canonical 0.1651 -> d512/e4 0.1639) yet published row is 0.125. The 24% residual gap must be per-horizon tuning (official script mixes e5/lr1e-4) or non-reproducibility - exact-script blocks staged on this box."
+  },
+  {
+   "model": "iTransformer",
+   "dataset": "PEMS03",
+   "pred_len": 96,
+   "config": "published-style e4/d512/lr1e-3 (fixed across horizons)",
+   "seeds_mse": [
+    1.5959,
+    1.2469,
+    1.4488
+   ],
+   "mean_mse": 1.4305,
+   "published_reference": {
+    "value": 0.164,
+    "source": "iTransformer paper row"
+   },
+   "box": "40230645 (Quadro P4000)",
+   "harvested": "2026-06-12",
+   "provenance": "metrics.npy[1] from TSLibAudit/results/*ITPUB_P03_96*_aud_{0,1,2}",
+   "note": "DIVERGED 3/3 SEEDS (MSE>1.0). Naive capacity scaling at lr1e-3 catastrophically unstable at long horizon - exactly the Limitation-3 instability the MultiRel/StructMamba stability analysis predicts. The published 0.164 therefore requires the official script's per-horizon lr1e-4/e5 settings; exact-script verification staged (ITEX). Canonical d256 converges fine (0.2755)."
   }
  ]
 }
