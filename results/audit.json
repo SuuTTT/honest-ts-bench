@@ -203,6 +203,101 @@
    "harvested": "2026-06-12",
    "provenance": "metrics.npy[1] from results/*SM_P07_24*_sm_{0,1,2}; clean post-duplicate-kill",
    "note": "Ties S-Mamba published (0.081) on canonical protocol; DMamba pub 0.077 ahead by ~6%. std 0.0003."
+  },
+  {
+   "model": "Crossformer",
+   "dataset": "PEMS03",
+   "pred_len": 12,
+   "seeds_mse": [
+    0.0638,
+    0.0629,
+    0.064
+   ],
+   "mean_mse": 0.0636,
+   "published_reference": {
+    "value": 0.09,
+    "source": "iTransformer Table 9 via S-Mamba"
+   },
+   "box": "40424707 (RTX 3060)",
+   "harvested": "2026-06-12",
+   "provenance": "metrics.npy[1] from results/*AUD_PEMS03_12_Crossformer*_aud_{0,1,2}",
+   "note": "Extreme seed variance at 24/48/96 (up to 60%). Cross-box check: earlier A4000 run gave pred-24 0.0874 / pred-96 0.1997 - seed lottery dominates CrossFormer on PEMS03."
+  },
+  {
+   "model": "Crossformer",
+   "dataset": "PEMS03",
+   "pred_len": 24,
+   "seeds_mse": [
+    0.1195,
+    0.0794,
+    0.125
+   ],
+   "mean_mse": 0.108,
+   "published_reference": {
+    "value": 0.121,
+    "source": "iTransformer Table 9 via S-Mamba"
+   },
+   "box": "40424707 (RTX 3060)",
+   "harvested": "2026-06-12",
+   "provenance": "metrics.npy[1] from results/*AUD_PEMS03_24_Crossformer*_aud_{0,1,2}",
+   "note": "Extreme seed variance at 24/48/96 (up to 60%). Cross-box check: earlier A4000 run gave pred-24 0.0874 / pred-96 0.1997 - seed lottery dominates CrossFormer on PEMS03."
+  },
+  {
+   "model": "Crossformer",
+   "dataset": "PEMS03",
+   "pred_len": 48,
+   "seeds_mse": [
+    0.2353,
+    0.1584,
+    0.2526
+   ],
+   "mean_mse": 0.2154,
+   "published_reference": {
+    "value": 0.202,
+    "source": "iTransformer Table 9 via S-Mamba"
+   },
+   "box": "40424707 (RTX 3060)",
+   "harvested": "2026-06-12",
+   "provenance": "metrics.npy[1] from results/*AUD_PEMS03_48_Crossformer*_aud_{0,1,2}",
+   "note": "Extreme seed variance at 24/48/96 (up to 60%). Cross-box check: earlier A4000 run gave pred-24 0.0874 / pred-96 0.1997 - seed lottery dominates CrossFormer on PEMS03."
+  },
+  {
+   "model": "Crossformer",
+   "dataset": "PEMS03",
+   "pred_len": 96,
+   "seeds_mse": [
+    0.2196,
+    0.2392,
+    0.1696
+   ],
+   "mean_mse": 0.2094,
+   "published_reference": {
+    "value": 0.262,
+    "source": "iTransformer Table 9 via S-Mamba"
+   },
+   "box": "40424707 (RTX 3060)",
+   "harvested": "2026-06-12",
+   "provenance": "metrics.npy[1] from results/*AUD_PEMS03_96_Crossformer*_aud_{0,1,2}",
+   "note": "Extreme seed variance at 24/48/96 (up to 60%). Cross-box check: earlier A4000 run gave pred-24 0.0874 / pred-96 0.1997 - seed lottery dominates CrossFormer on PEMS03."
+  },
+  {
+   "model": "StructMamba",
+   "dataset": "PEMS07",
+   "pred_len": 48,
+   "seeds_mse": [
+    0.1188,
+    0.1187,
+    0.1179
+   ],
+   "mean_mse": 0.1185,
+   "published_reference": {
+    "value": null,
+    "source": "ours; DMamba pub 0.096, S-Mamba pub 0.093, MultiRel 0.1356, iT 0.1572"
+   },
+   "box": "40230626 (RTX 3060)",
+   "harvested": "2026-06-12",
+   "provenance": "metrics.npy[1] from results/*SM_P07_48*_sm_{0,1,2}; clean",
+   "note": "Well ahead of canonical baselines; behind Mamba published rows at this horizon (their protocol is stronger)."
   }
  ]
 }
