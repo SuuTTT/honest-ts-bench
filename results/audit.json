@@ -864,6 +864,26 @@
    "harvested": "2026-06-12",
    "provenance": "metrics.npy[1] from TSLibAudit/results/*ITP_PEMS07_12*",
    "note": "Reproduces (0.0679 vs 0.067) - PEMS07 short-horizon row is honest; the failure is PEMS04-specific so far."
+  },
+  {
+   "model": "S-Mamba",
+   "dataset": "PEMS04",
+   "pred_len": 96,
+   "config": "PUBLISHED (d1024/e4/lr3e-4/use_norm0)",
+   "seeds_mse": [
+    0.1255,
+    0.1218,
+    0.1233
+   ],
+   "mean_mse": 0.1235,
+   "published_reference": {
+    "value": 0.137,
+    "source": "S-Mamba paper (itr=1)"
+   },
+   "box": "40230626 (RTX 3060)",
+   "harvested": "2026-06-12",
+   "provenance": "metrics.npy[1] from SDMamba/results/SMPUB_P04_96_*_{0,1,2}",
+   "note": "PUBLISHED-REGIME PEMS04 GRID COMPLETE: 0.0726/0.0843/0.1006/0.1235 vs paper 0.076/0.084/0.115/0.137 - fully reproducible, uniformly slightly favorable. Takes the pred-96 cell lead (vs CrossFormer canonical 0.1310, DMamba pub 0.143). Canonical-config regime starting now."
   }
  ],
  "methodology_notes": [
