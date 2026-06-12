@@ -336,6 +336,25 @@
    "harvested": "2026-06-12",
    "provenance": "metrics.npy[1] from results/*AUD_PEMS08_12_TimesNet*_aud_{0,1,2}",
    "note": "First DEFLATION case: published (0.112) slightly better than self-run mean (0.1200, -7%) - within seed noise. TimesNet's published rows look roughly honest, unlike CrossFormer's. Audit reports both directions."
+  },
+  {
+   "model": "TimesNet",
+   "dataset": "PEMS04",
+   "pred_len": 12,
+   "seeds_mse": [
+    0.0929,
+    0.0957,
+    0.0978
+   ],
+   "mean_mse": 0.0955,
+   "published_reference": {
+    "value": 0.087,
+    "source": "S-Mamba paper table"
+   },
+   "box": "40230497 (RTX 3060)",
+   "harvested": "2026-06-12",
+   "provenance": "metrics.npy[1] from results/*AUD_PEMS04_12_TimesNet*_aud_{0,1,2}",
+   "note": "Second deflation case: published 0.087 better than self-run 0.0955 (-9%). TimesNet published rows consistently honest-to-favorable; CrossFormer's were the outlier."
   }
  ]
 }
