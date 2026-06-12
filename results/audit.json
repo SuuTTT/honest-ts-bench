@@ -626,6 +626,26 @@
    "status": "OOM at batch 8 on 8GB RTX 5060; batch-4 retry staged (fixup_P07.sh) after TimesNet grid",
    "box": "40121712 (RTX 5060)",
    "harvested": "2026-06-12"
+  },
+  {
+   "model": "S-Mamba",
+   "dataset": "PEMS04",
+   "pred_len": 24,
+   "config": "PUBLISHED (d1024/e4/lr3e-4/use_norm0)",
+   "seeds_mse": [
+    0.0844,
+    0.084,
+    0.0846
+   ],
+   "mean_mse": 0.0843,
+   "published_reference": {
+    "value": 0.084,
+    "source": "S-Mamba paper (itr=1)"
+   },
+   "box": "40230626 (RTX 3060)",
+   "harvested": "2026-06-12",
+   "provenance": "metrics.npy[1] from SDMamba/results/SMPUB_P04_24_*_{0,1,2}",
+   "note": "Exact reproduction (0.0843 vs 0.084). vs canonical-protocol: CrossFormer 0.0783 still wins the cell; StructMamba 0.0919."
   }
  ]
 }
