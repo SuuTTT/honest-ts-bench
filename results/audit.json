@@ -924,6 +924,45 @@
    "harvested": "2026-06-12",
    "provenance": "metrics.npy[1] from SDMamba/results/SMCAN_P04_24_*_{0,1,2}",
    "note": "Capacity premium grows with horizon: 6% at pred-12 -> 17% at pred-24 (0.0843 pub-config vs 0.0987 canonical). Same-budget ladder: CrossFormer 0.0783 < StructMamba 0.0919 < S-Mamba 0.0987 < MultiRel 0.1055 < iT 0.1248. StructMamba wins again on equal footing."
+  },
+  {
+   "model": "iTransformer",
+   "dataset": "PEMS07",
+   "pred_len": 24,
+   "config": "EXACT official script",
+   "seeds_mse": [
+    0.0989,
+    0.0988
+   ],
+   "mean_mse": 0.0988,
+   "published_reference": {
+    "value": 0.088,
+    "source": "iTransformer paper row"
+   },
+   "box": "40680574 GPU1 (A4000)",
+   "harvested": "2026-06-12",
+   "provenance": "metrics.npy[1] from TSLibAudit/results/*ITP_PEMS07_24* (2 of 3 seeds visible at harvest; recheck)",
+   "note": "Exact-script = canonical d256 (0.0969); published 0.088 ~10% favorable - mild non-reproduction."
+  },
+  {
+   "model": "iTransformer",
+   "dataset": "PEMS07",
+   "pred_len": 48,
+   "config": "EXACT official script",
+   "seeds_mse": [
+    1.5048,
+    1.2701,
+    1.5049
+   ],
+   "mean_mse": 1.4266,
+   "published_reference": {
+    "value": 0.11,
+    "source": "iTransformer paper row"
+   },
+   "box": "40680574 GPU1 (A4000)",
+   "harvested": "2026-06-12",
+   "provenance": "metrics.npy[1] from TSLibAudit/results/*ITP_PEMS07_48*",
+   "note": "DIVERGED 3/3 SEEDS at N=883 with iT's OWN official config - second adversarial divergence (after PEMS03-96 d512). Published 0.110 unreachable; canonical d256 converges stably (0.1572). Full-attention instability at scale, exactly as the StructMamba/MultiRel stability analysis predicts."
   }
  ],
  "methodology_notes": [
