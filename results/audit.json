@@ -904,6 +904,26 @@
    "harvested": "2026-06-12",
    "provenance": "metrics.npy[1] from SDMamba/results/SMCAN_P04_12_*_{0,1,2}",
    "note": "DECOMPOSITION: published-config 0.0726 -> canonical 0.0770 = 6% capacity/tuning premium. Same-budget ladder: CrossFormer 0.0679 < StructMamba 0.0738 < S-Mamba 0.0770 < MultiRel 0.0807 < iT 0.0887. StructMamba beats S-Mamba on equal footing at this cell."
+  },
+  {
+   "model": "S-Mamba",
+   "dataset": "PEMS04",
+   "pred_len": 24,
+   "config": "CANONICAL (d256/e3/lr1e-3/batch16/RevIN)",
+   "seeds_mse": [
+    0.0989,
+    0.0983,
+    0.099
+   ],
+   "mean_mse": 0.0987,
+   "published_reference": {
+    "value": 0.084,
+    "source": "S-Mamba paper (tuned config)"
+   },
+   "box": "40230626 (RTX 3060)",
+   "harvested": "2026-06-12",
+   "provenance": "metrics.npy[1] from SDMamba/results/SMCAN_P04_24_*_{0,1,2}",
+   "note": "Capacity premium grows with horizon: 6% at pred-12 -> 17% at pred-24 (0.0843 pub-config vs 0.0987 canonical). Same-budget ladder: CrossFormer 0.0783 < StructMamba 0.0919 < S-Mamba 0.0987 < MultiRel 0.1055 < iT 0.1248. StructMamba wins again on equal footing."
   }
  ],
  "methodology_notes": [
