@@ -884,6 +884,26 @@
    "harvested": "2026-06-12",
    "provenance": "metrics.npy[1] from SDMamba/results/SMPUB_P04_96_*_{0,1,2}",
    "note": "PUBLISHED-REGIME PEMS04 GRID COMPLETE: 0.0726/0.0843/0.1006/0.1235 vs paper 0.076/0.084/0.115/0.137 - fully reproducible, uniformly slightly favorable. Takes the pred-96 cell lead (vs CrossFormer canonical 0.1310, DMamba pub 0.143). Canonical-config regime starting now."
+  },
+  {
+   "model": "S-Mamba",
+   "dataset": "PEMS04",
+   "pred_len": 12,
+   "config": "CANONICAL (d256/e3/lr1e-3/batch16/RevIN)",
+   "seeds_mse": [
+    0.0775,
+    0.0769,
+    0.0765
+   ],
+   "mean_mse": 0.077,
+   "published_reference": {
+    "value": 0.076,
+    "source": "S-Mamba paper (their tuned d1024 config)"
+   },
+   "box": "40230626 (RTX 3060)",
+   "harvested": "2026-06-12",
+   "provenance": "metrics.npy[1] from SDMamba/results/SMCAN_P04_12_*_{0,1,2}",
+   "note": "DECOMPOSITION: published-config 0.0726 -> canonical 0.0770 = 6% capacity/tuning premium. Same-budget ladder: CrossFormer 0.0679 < StructMamba 0.0738 < S-Mamba 0.0770 < MultiRel 0.0807 < iT 0.0887. StructMamba beats S-Mamba on equal footing at this cell."
   }
  ],
  "methodology_notes": [
