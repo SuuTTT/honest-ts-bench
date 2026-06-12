@@ -1063,6 +1063,26 @@
    "harvested": "2026-06-12",
    "provenance": "metrics.npy[1] from TSLibAudit/results/*ITP_PEMS08_24*",
    "note": "Official config worse than canonical (0.1152) and misses published by 17%. PEMS08 joins PEMS04: published rows unreachable, canonical config superior to official config."
+  },
+  {
+   "model": "iTransformer",
+   "dataset": "PEMS08",
+   "pred_len": 48,
+   "config": "EXACT official script",
+   "seeds_mse": [
+    1.7061,
+    1.7083,
+    1.7087
+   ],
+   "mean_mse": 1.7077,
+   "published_reference": {
+    "value": 0.186,
+    "source": "iTransformer paper row"
+   },
+   "box": "40680574 GPU1 (A4000)",
+   "harvested": "2026-06-12",
+   "provenance": "metrics.npy[1] from TSLibAudit/results/*ITP_PEMS08_48*",
+   "note": "FOURTH official-config divergence (3/3 seeds). Divergence set now: PEMS03-96, PEMS07-48, PEMS07-96, PEMS08-48. Canonical d256 converges at all (0.2011 here)."
   }
  ],
  "methodology_notes": [
