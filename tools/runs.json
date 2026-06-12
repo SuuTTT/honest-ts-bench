@@ -47,8 +47,8 @@
       "project": "ts-bench-audit",
       "box": "40230645 (ssh1:30645, P4000)",
       "what": "iTransformer PUBLISHED config (e4/d512, official repo script) PEMS03 grid + PatchTST pred-24/48/96 gap-fill",
-      "status": "running",
-      "progress": "launched 06-12; cuDNN disabled (Pascal engine bug); 0.27s/iter"
+      "status": "done",
+      "progress": "ITP sweep COMPLETE: short-horizon reproduces; 5 long-horizon cells DIVERGE from official configs; canonical never diverges."
     },
     {
       "project": "ts-bench-audit",
@@ -61,8 +61,8 @@
       "project": "ts-bench-audit",
       "box": "40680574 GPU1 (ssh4:10575, A4000)",
       "what": "iTransformer PUBLISHED config (e4/d512) PEMS04+07+08 grids - protocol-inflation axis",
-      "status": "running",
-      "progress": "launched 06-12; same co-tenant priority machinery"
+      "status": "done",
+      "progress": "ITP sweep COMPLETE: short-horizon reproduces; 5 long-horizon cells DIVERGE from official configs; canonical never diverges."
     },
     {
       "project": "ts-bench-audit",
@@ -70,6 +70,13 @@
       "what": "S-Mamba PEMS07+08 two-regime grids (refill chain)",
       "status": "running",
       "progress": "started via refill.sh after P04; disk-full incident resolved (100%->39%, metrics preserved)"
+    },
+    {
+      "project": "ts-bench-audit",
+      "box": "40680574 GPU1 (A4000)",
+      "what": "PatchTST PEMS07 grid (fills the OOM hole - only 16GB card in fleet)",
+      "status": "running",
+      "progress": "launched 06-12, batch 8, co-tenant yield active"
     }
   ],
   "queue": [
