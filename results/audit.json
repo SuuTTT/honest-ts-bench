@@ -704,6 +704,26 @@
    "harvested": "2026-06-12",
    "provenance": "metrics.npy[1] from results/*AUD_PEMS04_24_TimesNet*_aud_{0,1,2}",
    "note": "Published favorable by 13%; 20% seed spread (0.108-0.130) - TimesNet variance also non-trivial at longer horizons."
+  },
+  {
+   "model": "S-Mamba",
+   "dataset": "PEMS04",
+   "pred_len": 48,
+   "config": "PUBLISHED (d1024/e4/lr3e-4/use_norm0)",
+   "seeds_mse": [
+    0.1001,
+    0.1009,
+    0.1009
+   ],
+   "mean_mse": 0.1006,
+   "published_reference": {
+    "value": 0.115,
+    "source": "S-Mamba paper (itr=1)"
+   },
+   "box": "40230626 (RTX 3060)",
+   "harvested": "2026-06-12",
+   "provenance": "metrics.npy[1] from SDMamba/results/SMPUB_P04_48_*_{0,1,2}",
+   "note": "Reproduces favorably (0.1006 vs pub 0.115). FIRST CELL where Mamba genuinely leads with verified numbers: beats DMamba pub 0.113, StructMamba 0.1297, CrossFormer 0.1609. Canonical-config row pending to decompose capacity vs architecture."
   }
  ]
 }
