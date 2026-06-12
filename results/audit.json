@@ -1023,6 +1023,46 @@
    "harvested": "2026-06-12",
    "provenance": "metrics.npy[1] from TSLibAudit/results/*ITP_PEMS07_96*",
    "note": "THIRD official-config divergence (3/3 seeds, MSE 1.7-1.9). iT official configs now diverge at PEMS03-96, PEMS07-48, PEMS07-96. Canonical d256 converges at all of these (0.2485 here). Published long-horizon iT rows are unreachable from the official scripts in our environment."
+  },
+  {
+   "model": "iTransformer",
+   "dataset": "PEMS08",
+   "pred_len": 12,
+   "config": "EXACT official script",
+   "seeds_mse": [
+    0.0873,
+    0.0874,
+    0.087
+   ],
+   "mean_mse": 0.0872,
+   "published_reference": {
+    "value": 0.079,
+    "source": "iTransformer paper row"
+   },
+   "box": "40680574 GPU1 (A4000)",
+   "harvested": "2026-06-12",
+   "provenance": "metrics.npy[1] from TSLibAudit/results/*ITP_PEMS08_12*",
+   "note": "Official config (d512) WORSE than canonical d256 (0.0794) and misses published 0.079 by 10%."
+  },
+  {
+   "model": "iTransformer",
+   "dataset": "PEMS08",
+   "pred_len": 24,
+   "config": "EXACT official script",
+   "seeds_mse": [
+    0.1341,
+    0.1346,
+    0.1351
+   ],
+   "mean_mse": 0.1346,
+   "published_reference": {
+    "value": 0.115,
+    "source": "iTransformer paper row"
+   },
+   "box": "40680574 GPU1 (A4000)",
+   "harvested": "2026-06-12",
+   "provenance": "metrics.npy[1] from TSLibAudit/results/*ITP_PEMS08_24*",
+   "note": "Official config worse than canonical (0.1152) and misses published by 17%. PEMS08 joins PEMS04: published rows unreachable, canonical config superior to official config."
   }
  ],
  "methodology_notes": [
