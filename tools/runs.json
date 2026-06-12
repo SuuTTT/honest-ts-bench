@@ -49,15 +49,23 @@
       "what": "iTransformer PUBLISHED config (e4/d512, official repo script) PEMS03 grid + PatchTST pred-24/48/96 gap-fill",
       "status": "running",
       "progress": "launched 06-12; cuDNN disabled (Pascal engine bug); 0.27s/iter"
+    },
+    {
+      "project": "ts-bench-audit",
+      "box": "40680574 GPU0 (ssh4:10575, A4000)",
+      "what": "TimesNet PEMS07 grid (4 horizons x 3 seeds, batch 8)",
+      "status": "running",
+      "progress": "launched 06-12; nice-19 + auto-yield to SE-project co-tenant (guard.sh)"
+    },
+    {
+      "project": "ts-bench-audit",
+      "box": "40680574 GPU1 (ssh4:10575, A4000)",
+      "what": "iTransformer PUBLISHED config (e4/d512) PEMS04+07+08 grids - protocol-inflation axis",
+      "status": "running",
+      "progress": "launched 06-12; same co-tenant priority machinery"
     }
   ],
   "queue": [
-    {
-      "project": "ts-bench-audit",
-      "what": "S-Mamba PEMS03/07/08 grids, both regimes (published d1024/e4 + canonical d256/e3) - dual-GPU parallel",
-      "target_boxes": "40680574 (ssh4:10574, A4000 x2) - provisioning, ssh not up yet",
-      "blocked_on": "box boot"
-    },
     {
       "project": "ts-bench-audit",
       "what": "S-Mamba + DMamba self-runs under canonical protocol (verify code availability first)",
@@ -75,6 +83,12 @@
       "what": "Protocol-inflation axis: rerun top-3 methods at their published configs",
       "target_boxes": "TBD",
       "blocked_on": "Phase 1 canonical numbers"
+    },
+    {
+      "project": "ts-bench-audit",
+      "what": "S-Mamba PEMS03/07/08 grids (both regimes) - run on box 40230626 after PEMS04 finishes (dual-A4000 mamba env blocked: custom cxx11abiFALSE torch defeats all wheels+source builds so far)",
+      "target_boxes": "40230626",
+      "blocked_on": "smamba_p04 completion"
     }
   ]
 }
