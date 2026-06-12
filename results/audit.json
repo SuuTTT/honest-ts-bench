@@ -577,6 +577,26 @@
    "harvested": "2026-06-12",
    "provenance": "metrics.npy[1] from TSLibAudit/results/*ITPUB_PEMS04_12*_aud_{0,1,2}",
    "note": "Key negative: doubling d_model 256->512 changes nothing (0.0881 vs canonical 0.0887). The published 0.078 must come from d1024 and/or lr - exact-official-script reruns (tag ITP) launched to test."
+  },
+  {
+   "model": "iTransformer",
+   "dataset": "PEMS03",
+   "pred_len": 12,
+   "config": "published-style e4/d512/lr1e-3 (official PEMS03 script's pred-12 block)",
+   "seeds_mse": [
+    0.0694,
+    0.0684,
+    0.0697
+   ],
+   "mean_mse": 0.0692,
+   "published_reference": {
+    "value": 0.071,
+    "source": "iTransformer paper row"
+   },
+   "box": "40230645 (Quadro P4000)",
+   "harvested": "2026-06-12",
+   "provenance": "metrics.npy[1] from TSLibAudit/results/*ITPUB_P03_12*_aud_{0,1,2}",
+   "note": "Three-way agreement at short horizon: published 0.071 = canonical d256 0.0694 = published-config 0.0692. iT protocol inflation is a LONG-horizon phenomenon (published 0.164 vs canonical 0.2755 at pred-96) - those cells are queued on this box."
   }
  ]
 }
