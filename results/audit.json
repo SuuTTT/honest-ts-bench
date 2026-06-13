@@ -1103,6 +1103,82 @@
    "harvested": "2026-06-12",
    "provenance": "metrics.npy[1] from TSLibAudit/results/*ITP_PEMS08_96*",
    "note": "FIFTH and final official-config divergence. ITP sweep COMPLETE. Verdict: iT official configs reproduce only short-horizon cells; diverge at 5 long-horizon cells across 3 datasets; canonical d256 never diverges. Published long-horizon iT rows (incl. the table everyone copies) are not regenerable from released code in our environment."
+  },
+  {
+   "model": "TimesNet",
+   "dataset": "PEMS03",
+   "pred_len": 24,
+   "seeds_mse": [
+    0.1205,
+    0.1424,
+    0.1692
+   ],
+   "mean_mse": 0.144,
+   "published_reference": {
+    "value": 0.123,
+    "source": "S-Mamba paper table"
+   },
+   "box": "40424707",
+   "harvested": "2026-06-13",
+   "provenance": "metrics.npy[1] from results/*AUD_PEMS03_24_TimesNet*_aud_{0,1,2}",
+   "note": "30% seed spread"
+  },
+  {
+   "model": "TimesNet",
+   "dataset": "PEMS04",
+   "pred_len": 48,
+   "seeds_mse": [
+    0.1418,
+    0.22,
+    0.1551
+   ],
+   "mean_mse": 0.1723,
+   "published_reference": {
+    "value": 0.187,
+    "source": "S-Mamba paper table"
+   },
+   "box": "40230497",
+   "harvested": "2026-06-13",
+   "provenance": "metrics.npy[1] from results/*AUD_PEMS04_48_TimesNet*_aud_{0,1,2}",
+   "note": "55% seed spread; published favorable but within its own variance"
+  },
+  {
+   "model": "TimesNet",
+   "dataset": "PEMS08",
+   "pred_len": 48,
+   "seeds_mse": [
+    0.2085,
+    0.2057,
+    0.2062
+   ],
+   "mean_mse": 0.2068,
+   "published_reference": {
+    "value": 0.226,
+    "source": "S-Mamba paper table"
+   },
+   "box": "22734",
+   "harvested": "2026-06-13",
+   "provenance": "metrics.npy[1] from results/*AUD_PEMS08_48_TimesNet*_aud_{0,1,2}",
+   "note": "published favorable 8%; tight seeds here"
+  },
+  {
+   "model": "TimesNet",
+   "dataset": "PEMS07",
+   "pred_len": 12,
+   "seeds_mse": [
+    0.0896,
+    0.0835,
+    0.0838
+   ],
+   "mean_mse": 0.0856,
+   "published_reference": {
+    "value": 0.082,
+    "source": "S-Mamba paper table"
+   },
+   "box": "40121712",
+   "harvested": "2026-06-13",
+   "provenance": "metrics.npy[1] from results/*AUD_PEMS07_12_TimesNet*_aud_{0,1,2}",
+   "note": "published favorable 4%"
   }
  ],
  "methodology_notes": [
