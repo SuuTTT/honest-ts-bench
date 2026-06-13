@@ -1619,6 +1619,25 @@
    "harvested": "2026-06-13",
    "provenance": "metrics.npy[1] from TSLibAudit/results/*AUDA_PEMS07_96_TimesNet*",
    "note": "StructMamba 0.1733 best at N=883 long horizon."
+  },
+  {
+   "model": "PatchTST",
+   "dataset": "PEMS03",
+   "pred_len": 48,
+   "seeds_mse": [
+    0.2192,
+    0.2207,
+    0.2204
+   ],
+   "mean_mse": 0.2201,
+   "published_reference": {
+    "value": null,
+    "source": "audit gap-fill; StructMamba 0.1247, iT-canonical 0.1651"
+   },
+   "box": "40230645 (Quadro P4000)",
+   "harvested": "2026-06-13",
+   "provenance": "metrics.npy[1] from *AUD_PEMS03_48_PatchTST*",
+   "note": "Channel-independent; tight seeds but far behind channel-attention. Cross-channel structure decisive at N=358 long horizon."
   }
  ],
  "methodology_notes": [
