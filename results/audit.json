@@ -1543,6 +1543,25 @@
    "harvested": "2026-06-13",
    "provenance": "metrics.npy[1] from results/*AUD_PEMS07_24_TimesNet*_aud_{0,1,2}",
    "note": "At N=883, TimesNet behind all channel-attention methods."
+  },
+  {
+   "model": "TimesNet",
+   "dataset": "PEMS08",
+   "pred_len": 96,
+   "seeds_mse": [
+    0.3333,
+    0.3588,
+    0.473
+   ],
+   "mean_mse": 0.3884,
+   "published_reference": {
+    "value": 0.226,
+    "source": "S-Mamba table"
+   },
+   "box": "22734 (RTX 3070)",
+   "harvested": "2026-06-13",
+   "provenance": "metrics.npy[1] from results/*AUD_PEMS08_96_TimesNet*_aud_{0,1,2}",
+   "note": "35% seed spread (0.33-0.47); published 0.226 unreachable. TimesNet also unstable at long horizon. StructMamba 0.3026, S-Mamba-can 0.2701 both better+tighter."
   }
  ],
  "methodology_notes": [
