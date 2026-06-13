@@ -1600,6 +1600,25 @@
    "box": "40230626 (RTX 3060, dedicated)",
    "harvested": "2026-06-13",
    "provenance": "metrics.npy[1] from TSLib/results/*SECC_PEMS08_24*_secc_{0,1,2}"
+  },
+  {
+   "model": "TimesNet",
+   "dataset": "PEMS07",
+   "pred_len": 96,
+   "seeds_mse": [
+    0.1894,
+    0.2192,
+    0.1862
+   ],
+   "mean_mse": 0.1983,
+   "published_reference": {
+    "value": null,
+    "source": "audit; StructMamba 0.1733, S-Mamba-can 0.1803, MultiRel 0.2166"
+   },
+   "box": "40680574 GPU0 (A4000)",
+   "harvested": "2026-06-13",
+   "provenance": "metrics.npy[1] from TSLibAudit/results/*AUDA_PEMS07_96_TimesNet*",
+   "note": "StructMamba 0.1733 best at N=883 long horizon."
   }
  ],
  "methodology_notes": [
