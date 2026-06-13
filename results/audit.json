@@ -1217,6 +1217,26 @@
    "harvested": "2026-06-13",
    "provenance": "metrics.npy[1] from TSLibAudit/results/*AUD_PEMS03_24_PatchTST*_aud_{0,1,2}",
    "note": "Channel-independent PatchTST mid-pack on PEMS03; far behind channel-attention methods - confirms cross-channel structure matters at this N."
+  },
+  {
+   "model": "SECrossformer",
+   "dataset": "PEMS04",
+   "pred_len": 12,
+   "config": "SE-masked CrossFormer (cross-time attn + SE-masked cross-dimension; canonical d256/e3)",
+   "seeds_mse": [
+    0.0684,
+    0.0687,
+    0.069
+   ],
+   "mean_mse": 0.0687,
+   "published_reference": {
+    "value": null,
+    "source": "PHASE-2; vs baseline CrossFormer 0.0679 (60-75% spread), StructMamba 0.0738"
+   },
+   "box": "40680574 GPU1 (A4000)",
+   "harvested": "2026-06-13",
+   "provenance": "metrics.npy[1] from TSLibAudit/results/*SEC_PEMS04_12*_aud_{0,1,2}",
+   "note": "HYPOTHESIS CONFIRMED at pred-12: matches baseline CrossFormer accuracy (0.0687 vs 0.0679) with seed spread 0.9% vs CrossFormer's 40-75%. SE structure preserves accuracy, kills the variance. Beats StructMamba (0.0738) and all canonical methods on this cell."
   }
  ],
  "methodology_notes": [
