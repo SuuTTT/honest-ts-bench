@@ -1581,6 +1581,25 @@
    "harvested": "2026-06-13",
    "provenance": "metrics.npy[1] from results/*AUD_PEMS03_48_TimesNet*_aud_{0,1,2}",
    "note": "39% seed spread; vs StructMamba 0.1247 (tight). TimesNet variance grows with horizon on P03 too."
+  },
+  {
+   "model": "SECrossformer",
+   "dataset": "PEMS08",
+   "pred_len": 24,
+   "config": "SE-masked CrossFormer, CLEAN dedicated 3060 (d256/e3, batch 32)",
+   "seeds_mse": [
+    0.1619,
+    0.1574,
+    0.161
+   ],
+   "mean_mse": 0.1601,
+   "published_reference": {
+    "value": null,
+    "source": "PHASE-2 clean; baseline CrossFormer 0.1637; tracks it tight (3% spread). StructMamba 0.1024 far better on small-N."
+   },
+   "box": "40230626 (RTX 3060, dedicated)",
+   "harvested": "2026-06-13",
+   "provenance": "metrics.npy[1] from TSLib/results/*SECC_PEMS08_24*_secc_{0,1,2}"
   }
  ],
  "methodology_notes": [
