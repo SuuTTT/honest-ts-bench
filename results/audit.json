@@ -1242,21 +1242,21 @@
    "model": "SECrossformer",
    "dataset": "PEMS08",
    "pred_len": 12,
-   "config": "SE-masked CrossFormer (canonical d256/e3)",
+   "config": "SE-masked CrossFormer, CLEAN dedicated 3060 batch-32 (d256/e3)",
    "seeds_mse": [
-    0.1311,
-    0.1343,
-    0.1317
+    0.1314,
+    0.1356,
+    0.1327
    ],
-   "mean_mse": 0.1324,
+   "mean_mse": 0.1332,
    "published_reference": {
     "value": null,
     "source": "PHASE-2; baseline CrossFormer 0.1368, iT 0.0794, StructMamba 0.0738"
    },
-   "box": "40680574 GPU1 (A4000)",
+   "box": "40230626 (RTX 3060, dedicated)",
    "harvested": "2026-06-13",
-   "provenance": "metrics.npy[1] from TSLibAudit/results/*SEC_PEMS08_12*_aud_{0,1,2}",
-   "note": "Tracks baseline CrossFormer (0.1324 vs 0.1368), tight seeds (2% spread vs CrossFormer's wider). On small-N PEMS08, CrossFormer-family stays weak vs channel-attention (iT 0.0794) regardless of masking - SE masks preserve the backbone's character, don't transform it."
+   "provenance": "metrics.npy[1] from TSLib/results/*SECC_PEMS08_12*_secc_{0,1,2}",
+   "note": "CLEAN rerun confirms shared-box value (0.1332 vs 0.1324). Tight 3% spread. On small-N PEMS08, CrossFormer-family weak vs channel-attention (iT 0.0794) regardless of SE masks."
   },
   {
    "model": "SECrossformer",
