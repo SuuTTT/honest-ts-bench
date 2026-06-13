@@ -1277,6 +1277,253 @@
    "harvested": "2026-06-13",
    "provenance": "metrics.npy[1] from TSLibAudit/results/*SEC_PEMS04_96*_aud_{0,1,2}",
    "note": "DO-NOT-CITE until rerun: batch 4 vs everyone-else's 16 confounds both MSE and variance. Wide spread here likely the small-batch artifact, not an SE-masking failure. NEEDS clean batch-16 rerun on a dedicated GPU. pred-12 (clean batch-16) remains the valid headline."
+  },
+  {
+   "model": "S-Mamba",
+   "dataset": "PEMS07",
+   "pred_len": 12,
+   "config": "CANONICAL (d256/e3)",
+   "seeds_mse": [
+    0.0612,
+    0.0613,
+    0.0614
+   ],
+   "mean_mse": 0.0613,
+   "published_reference": {
+    "value": null,
+    "source": "two-regime audit; StructMamba 0.0596 wins"
+   },
+   "box": "40230626 (RTX 3060)",
+   "harvested": "2026-06-13",
+   "provenance": "metrics.npy[1] from SDMamba/results/SMCAN_P07_12_*"
+  },
+  {
+   "model": "S-Mamba",
+   "dataset": "PEMS07",
+   "pred_len": 96,
+   "config": "CANONICAL (d256/e3)",
+   "seeds_mse": [
+    0.1787,
+    0.1807,
+    0.1816
+   ],
+   "mean_mse": 0.1803,
+   "published_reference": {
+    "value": null,
+    "source": "two-regime audit; StructMamba 0.1733 wins"
+   },
+   "box": "40230626 (RTX 3060)",
+   "harvested": "2026-06-13",
+   "provenance": "metrics.npy[1] from SDMamba/results/SMCAN_P07_96_*"
+  },
+  {
+   "model": "S-Mamba",
+   "dataset": "PEMS08",
+   "pred_len": 12,
+   "config": "CANONICAL (d256/e3)",
+   "seeds_mse": [
+    0.0733,
+    0.074,
+    0.0744
+   ],
+   "mean_mse": 0.0739,
+   "published_reference": {
+    "value": null,
+    "source": "two-regime audit; ~tie StructMamba 0.0738"
+   },
+   "box": "40230626 (RTX 3060)",
+   "harvested": "2026-06-13",
+   "provenance": "metrics.npy[1] from SDMamba/results/SMCAN_P08_12_*"
+  },
+  {
+   "model": "S-Mamba",
+   "dataset": "PEMS08",
+   "pred_len": 24,
+   "config": "CANONICAL (d256/e3)",
+   "seeds_mse": [
+    0.1009,
+    0.0993,
+    0.1005
+   ],
+   "mean_mse": 0.1002,
+   "published_reference": {
+    "value": null,
+    "source": "two-regime audit; ~tie StructMamba 0.1024"
+   },
+   "box": "40230626 (RTX 3060)",
+   "harvested": "2026-06-13",
+   "provenance": "metrics.npy[1] from SDMamba/results/SMCAN_P08_24_*"
+  },
+  {
+   "model": "S-Mamba",
+   "dataset": "PEMS08",
+   "pred_len": 48,
+   "config": "CANONICAL (d256/e3)",
+   "seeds_mse": [
+    0.1665,
+    0.16,
+    0.1652
+   ],
+   "mean_mse": 0.1639,
+   "published_reference": {
+    "value": null,
+    "source": "two-regime audit; ~tie StructMamba 0.1636"
+   },
+   "box": "40230626 (RTX 3060)",
+   "harvested": "2026-06-13",
+   "provenance": "metrics.npy[1] from SDMamba/results/SMCAN_P08_48_*"
+  },
+  {
+   "model": "S-Mamba",
+   "dataset": "PEMS08",
+   "pred_len": 96,
+   "config": "CANONICAL (d256/e3)",
+   "seeds_mse": [
+    0.2695,
+    0.2599,
+    0.281
+   ],
+   "mean_mse": 0.2701,
+   "published_reference": {
+    "value": null,
+    "source": "two-regime audit; S-Mamba WINS vs StructMamba 0.3026"
+   },
+   "box": "40230626 (RTX 3060)",
+   "harvested": "2026-06-13",
+   "provenance": "metrics.npy[1] from SDMamba/results/SMCAN_P08_96_*"
+  },
+  {
+   "model": "S-Mamba",
+   "dataset": "PEMS07",
+   "pred_len": 24,
+   "config": "PUBLISHED (d1024/e4)",
+   "seeds_mse": [
+    0.0823,
+    0.0823,
+    0.0814
+   ],
+   "mean_mse": 0.082,
+   "published_reference": {
+    "value": null,
+    "source": "two-regime audit; d1024 capacity"
+   },
+   "box": "40230626 (RTX 3060)",
+   "harvested": "2026-06-13",
+   "provenance": "metrics.npy[1] from SDMamba/results/SMPUB_P07_24_*"
+  },
+  {
+   "model": "S-Mamba",
+   "dataset": "PEMS07",
+   "pred_len": 48,
+   "config": "PUBLISHED (d1024/e4)",
+   "seeds_mse": [
+    0.1011,
+    0.0987,
+    0.0996
+   ],
+   "mean_mse": 0.0998,
+   "published_reference": {
+    "value": null,
+    "source": "two-regime audit; d1024 capacity"
+   },
+   "box": "40230626 (RTX 3060)",
+   "harvested": "2026-06-13",
+   "provenance": "metrics.npy[1] from SDMamba/results/SMPUB_P07_48_*"
+  },
+  {
+   "model": "S-Mamba",
+   "dataset": "PEMS07",
+   "pred_len": 96,
+   "config": "PUBLISHED (d1024/e4)",
+   "seeds_mse": [
+    0.1181,
+    0.1187,
+    0.1178
+   ],
+   "mean_mse": 0.1182,
+   "published_reference": {
+    "value": null,
+    "source": "two-regime audit; d1024; StructMamba canonical 0.1733"
+   },
+   "box": "40230626 (RTX 3060)",
+   "harvested": "2026-06-13",
+   "provenance": "metrics.npy[1] from SDMamba/results/SMPUB_P07_96_*"
+  },
+  {
+   "model": "S-Mamba",
+   "dataset": "PEMS08",
+   "pred_len": 12,
+   "config": "PUBLISHED (d1024/e4)",
+   "seeds_mse": [
+    0.0759,
+    0.0755,
+    0.0752
+   ],
+   "mean_mse": 0.0755,
+   "published_reference": {
+    "value": null,
+    "source": "two-regime audit; "
+   },
+   "box": "40230626 (RTX 3060)",
+   "harvested": "2026-06-13",
+   "provenance": "metrics.npy[1] from SDMamba/results/SMPUB_P08_12_*"
+  },
+  {
+   "model": "S-Mamba",
+   "dataset": "PEMS08",
+   "pred_len": 24,
+   "config": "PUBLISHED (d1024/e4)",
+   "seeds_mse": [
+    0.1107,
+    0.1074,
+    0.1071
+   ],
+   "mean_mse": 0.1084,
+   "published_reference": {
+    "value": null,
+    "source": "two-regime audit; "
+   },
+   "box": "40230626 (RTX 3060)",
+   "harvested": "2026-06-13",
+   "provenance": "metrics.npy[1] from SDMamba/results/SMPUB_P08_24_*"
+  },
+  {
+   "model": "S-Mamba",
+   "dataset": "PEMS08",
+   "pred_len": 48,
+   "config": "PUBLISHED (d1024/e4)",
+   "seeds_mse": [
+    0.1594,
+    0.1614,
+    0.1687
+   ],
+   "mean_mse": 0.1632,
+   "published_reference": {
+    "value": null,
+    "source": "two-regime audit; "
+   },
+   "box": "40230626 (RTX 3060)",
+   "harvested": "2026-06-13",
+   "provenance": "metrics.npy[1] from SDMamba/results/SMPUB_P08_48_*"
+  },
+  {
+   "model": "S-Mamba",
+   "dataset": "PEMS08",
+   "pred_len": 96,
+   "config": "PUBLISHED (d1024/e4)",
+   "seeds_mse": [
+    0.2652,
+    0.2779,
+    0.2547
+   ],
+   "mean_mse": 0.2659,
+   "published_reference": {
+    "value": null,
+    "source": "two-regime audit; "
+   },
+   "box": "40230626 (RTX 3060)",
+   "harvested": "2026-06-13",
+   "provenance": "metrics.npy[1] from SDMamba/results/SMPUB_P08_96_*"
   }
  ],
  "methodology_notes": [
