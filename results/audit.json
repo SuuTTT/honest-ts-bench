@@ -1198,6 +1198,25 @@
    "harvested": "2026-06-13",
    "provenance": "metrics.npy[1] from TSLibAudit/results/*AUDA_PEMS07_48_TimesNet*_aud_{0,1,2}",
    "note": "TimesNet at N=883 long horizon; behind StructMamba 0.1185 and MultiRel 0.1356. Also running on 5060 (audit_P07) as cross-box check."
+  },
+  {
+   "model": "PatchTST",
+   "dataset": "PEMS03",
+   "pred_len": 24,
+   "seeds_mse": [
+    0.1287,
+    0.1304,
+    0.1274
+   ],
+   "mean_mse": 0.1288,
+   "published_reference": {
+    "value": null,
+    "source": "ours canonical gap-fill; iT-canonical 0.1002, StructMamba 0.0839"
+   },
+   "box": "40230645 (Quadro P4000)",
+   "harvested": "2026-06-13",
+   "provenance": "metrics.npy[1] from TSLibAudit/results/*AUD_PEMS03_24_PatchTST*_aud_{0,1,2}",
+   "note": "Channel-independent PatchTST mid-pack on PEMS03; far behind channel-attention methods - confirms cross-channel structure matters at this N."
   }
  ],
  "methodology_notes": [
