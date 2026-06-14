@@ -52,31 +52,24 @@
     },
     {
       "project": "ts-bench-audit",
-      "box": "40680574 GPU0 (ssh4:10575, A4000)",
-      "what": "TimesNet PEMS07 grid (4 horizons x 3 seeds, batch 8)",
-      "status": "running",
-      "progress": "launched 06-12; nice-19 + auto-yield to SE-project co-tenant (guard.sh)"
-    },
-    {
-      "project": "ts-bench-audit",
-      "box": "40680574 GPU1 (ssh4:10575, A4000)",
-      "what": "iTransformer PUBLISHED config (e4/d512) PEMS04+07+08 grids - protocol-inflation axis",
-      "status": "done",
-      "progress": "ITP sweep COMPLETE: short-horizon reproduces; 5 long-horizon cells DIVERGE from official configs; canonical never diverges."
-    },
-    {
-      "project": "ts-bench-audit",
       "box": "40230626 (ssh5:30627, 3060)",
       "what": "S-Mamba PEMS07+08 two-regime grids (refill chain)",
       "status": "running",
       "progress": "started via refill.sh after P04; disk-full incident resolved (100%->39%, metrics preserved)"
     },
     {
-      "project": "ts-bench-audit",
-      "box": "40680574 GPU1 (A4000)",
-      "what": "PatchTST PEMS07 grid (fills the OOM hole - only 16GB card in fleet)",
+      "project": "phase-2-SEC",
+      "box": "40680574 GPU0 (ssh4:10575, A4000)",
+      "what": "SECrossformer PEMS07 extension (12/24) - completing 4-dataset keystone table",
       "status": "running",
-      "progress": "launched 06-12, batch 8, co-tenant yield active"
+      "progress": "P07-12 done 0.0716; P07-24 training"
+    },
+    {
+      "project": "phase-3-traffic",
+      "box": "40680574 GPU1 (ssh4:10575, A4000)",
+      "what": "Traffic (N=862) Phase-3: SECrossformer + iT + CrossFormer, horizons 96/192/336/720, batch 4",
+      "status": "running",
+      "progress": "data converted (OT header) + masks (3,862,862); batch reduced 8->4 for 16GB; StructMamba-Traffic runs on 30627 (mamba env)"
     }
   ],
   "queue": [
