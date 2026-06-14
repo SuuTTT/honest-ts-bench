@@ -1791,6 +1791,26 @@
    "harvested": "2026-06-14",
    "provenance": "metrics.npy[1] from *AUD_PEMS04_96_PatchTST*",
    "note": "Channel-independent collapses at long horizon (0.50 at pred-96) - SECrossformer 0.1087 is 4.6x better. Strongest evidence yet that cross-channel structure is essential."
+  },
+  {
+   "model": "SECrossformer",
+   "dataset": "PEMS03",
+   "pred_len": 24,
+   "config": "SE-masked CrossFormer, clean batch-16 (d256/e3)",
+   "seeds_mse": [
+    0.0844,
+    0.0823,
+    0.0825
+   ],
+   "mean_mse": 0.0831,
+   "published_reference": {
+    "value": null,
+    "source": "PHASE-2; StructMamba 0.0839, iT 0.1002, baseline-CrossFormer 0.0874(seed-lottery)"
+   },
+   "box": "40230626 (RTX 3060)",
+   "harvested": "2026-06-14",
+   "provenance": "metrics.npy[1] from *SECC_PEMS03_24*_secc_{0,1,2}",
+   "note": "~ties StructMamba 0.0839, beats iT 0.1002; tight 2.5% seed spread vs baseline CrossFormer's lottery."
   }
  ],
  "methodology_notes": [
