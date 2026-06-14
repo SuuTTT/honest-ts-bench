@@ -1850,6 +1850,82 @@
    "harvested": "2026-06-14",
    "provenance": "metrics.npy[1] from *AUD_PEMS03_96_TimesNet*",
    "note": "18% seed spread; TimesNet P03 grid complete. StructMamba 0.1878 far better+tighter."
+  },
+  {
+   "model": "PatchTST",
+   "dataset": "PEMS07",
+   "pred_len": 12,
+   "seeds_mse": [
+    0.0803,
+    0.0782,
+    0.0792
+   ],
+   "mean_mse": 0.0792,
+   "published_reference": {
+    "value": null,
+    "source": "audit gap-fill"
+   },
+   "box": "40680574 GPU1 (A4000)",
+   "harvested": "2026-06-14",
+   "provenance": "metrics.npy[1] from *AUDB_PEMS07_12_PatchTST*",
+   "note": "Channel-independent; collapses at long horizon (0.37 pred-96) vs StructMamba 0.1733 at N=883."
+  },
+  {
+   "model": "PatchTST",
+   "dataset": "PEMS07",
+   "pred_len": 24,
+   "seeds_mse": [
+    0.1284,
+    0.1267,
+    0.1258
+   ],
+   "mean_mse": 0.127,
+   "published_reference": {
+    "value": null,
+    "source": "audit gap-fill"
+   },
+   "box": "40680574 GPU1 (A4000)",
+   "harvested": "2026-06-14",
+   "provenance": "metrics.npy[1] from *AUDB_PEMS07_24_PatchTST*",
+   "note": "Channel-independent; collapses at long horizon (0.37 pred-96) vs StructMamba 0.1733 at N=883."
+  },
+  {
+   "model": "PatchTST",
+   "dataset": "PEMS07",
+   "pred_len": 48,
+   "seeds_mse": [
+    0.2267,
+    0.2334,
+    0.2297
+   ],
+   "mean_mse": 0.2299,
+   "published_reference": {
+    "value": null,
+    "source": "audit gap-fill"
+   },
+   "box": "40680574 GPU1 (A4000)",
+   "harvested": "2026-06-14",
+   "provenance": "metrics.npy[1] from *AUDB_PEMS07_48_PatchTST*",
+   "note": "Channel-independent; collapses at long horizon (0.37 pred-96) vs StructMamba 0.1733 at N=883."
+  },
+  {
+   "model": "PatchTST",
+   "dataset": "PEMS07",
+   "pred_len": 96,
+   "seeds_mse": [
+    0.3685,
+    0.3656,
+    0.3727
+   ],
+   "mean_mse": 0.3689,
+   "published_reference": {
+    "value": null,
+    "source": "audit gap-fill"
+   },
+   "box": "40680574 GPU1 (A4000)",
+   "harvested": "2026-06-14",
+   "provenance": "metrics.npy[1] from *AUDB_PEMS07_96_PatchTST*",
+   "note": "Channel-independent; collapses at long horizon (0.37 pred-96) vs StructMamba 0.1733 at N=883."
   }
  ],
  "methodology_notes": [
