@@ -87,12 +87,6 @@
       "blocked_on": "current audit grids"
     },
     {
-      "project": "struct-mamba",
-      "what": "Phase 2 ablations: SE-ordered scan, hierarchical SE masks, SE-adaptive k (PEMS04+08, pred-12/96)",
-      "target_boxes": "40230626 after StructMamba grid completes",
-      "blocked_on": "StructMamba PEMS04/07/08 grid"
-    },
-    {
       "project": "ts-bench-audit",
       "what": "Protocol-inflation axis: rerun top-3 methods at their published configs",
       "target_boxes": "TBD",
@@ -103,6 +97,12 @@
       "what": "S-Mamba PEMS03/07/08 grids (both regimes) - run on box 40230626 after PEMS04 finishes (dual-A4000 mamba env blocked: custom cxx11abiFALSE torch defeats all wheels+source builds so far)",
       "target_boxes": "40230626",
       "blocked_on": "smamba_p04 completion"
+    },
+    {
+      "project": "phase-3-generalize",
+      "what": "ECL (N=321, ready) + Traffic (N=862, prepped) - SECrossformer + StructMamba (+iT/CrossFormer on Traffic), horizons 96/192/336/720",
+      "target_boxes": "30627 chained: SEC-P03 -> ECL -> Traffic; will parallelize across freed boxes",
+      "blocked_on": "SEC PEMS03 completion"
     }
   ]
 }
