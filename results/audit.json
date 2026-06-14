@@ -1926,6 +1926,246 @@
    "harvested": "2026-06-14",
    "provenance": "metrics.npy[1] from *AUDB_PEMS07_96_PatchTST*",
    "note": "Channel-independent; collapses at long horizon (0.37 pred-96) vs StructMamba 0.1733 at N=883."
+  },
+  {
+   "model": "Autoformer",
+   "dataset": "PEMS04",
+   "pred_len": 12,
+   "seeds_mse": [
+    0.2568,
+    0.2463,
+    0.286
+   ],
+   "mean_mse": 0.263,
+   "config": "canonical d256 label_len48 (decoder models)",
+   "published_reference": {
+    "value": null,
+    "source": "VERIFIED self-run (replaces borrowed S-Mamba-table rows)"
+   },
+   "box": "40230497",
+   "harvested": "2026-06-14",
+   "provenance": "metrics.npy[1] from *CLAS_PEMS04_12_Autoformer*",
+   "note": "Nonstationary competitive; Autoformer/FEDformer poor. SECrossformer beats all."
+  },
+  {
+   "model": "Autoformer",
+   "dataset": "PEMS04",
+   "pred_len": 24,
+   "seeds_mse": [
+    0.5195,
+    0.4791,
+    0.5077
+   ],
+   "mean_mse": 0.5021,
+   "config": "canonical d256 label_len48 (decoder models)",
+   "published_reference": {
+    "value": null,
+    "source": "VERIFIED self-run (replaces borrowed S-Mamba-table rows)"
+   },
+   "box": "40230497",
+   "harvested": "2026-06-14",
+   "provenance": "metrics.npy[1] from *CLAS_PEMS04_24_Autoformer*",
+   "note": "Nonstationary competitive; Autoformer/FEDformer poor. SECrossformer beats all."
+  },
+  {
+   "model": "Autoformer",
+   "dataset": "PEMS04",
+   "pred_len": 48,
+   "seeds_mse": [
+    0.9046,
+    0.7883,
+    0.8357
+   ],
+   "mean_mse": 0.8429,
+   "config": "canonical d256 label_len48 (decoder models)",
+   "published_reference": {
+    "value": null,
+    "source": "VERIFIED self-run (replaces borrowed S-Mamba-table rows)"
+   },
+   "box": "40230497",
+   "harvested": "2026-06-14",
+   "provenance": "metrics.npy[1] from *CLAS_PEMS04_48_Autoformer*",
+   "note": "Nonstationary competitive; Autoformer/FEDformer poor. SECrossformer beats all."
+  },
+  {
+   "model": "Autoformer",
+   "dataset": "PEMS04",
+   "pred_len": 96,
+   "seeds_mse": [
+    1.4152,
+    1.8641,
+    1.3639
+   ],
+   "mean_mse": 1.5477,
+   "config": "canonical d256 label_len48 (decoder models)",
+   "published_reference": {
+    "value": null,
+    "source": "VERIFIED self-run (replaces borrowed S-Mamba-table rows)"
+   },
+   "box": "40230497",
+   "harvested": "2026-06-14",
+   "provenance": "metrics.npy[1] from *CLAS_PEMS04_96_Autoformer*",
+   "note": "Nonstationary competitive; Autoformer/FEDformer poor. SECrossformer beats all."
+  },
+  {
+   "model": "FEDformer",
+   "dataset": "PEMS04",
+   "pred_len": 12,
+   "seeds_mse": [
+    0.0986,
+    0.0965,
+    0.0983
+   ],
+   "mean_mse": 0.0978,
+   "config": "canonical d256 label_len48 (decoder models)",
+   "published_reference": {
+    "value": null,
+    "source": "VERIFIED self-run (replaces borrowed S-Mamba-table rows)"
+   },
+   "box": "40230497",
+   "harvested": "2026-06-14",
+   "provenance": "metrics.npy[1] from *CLAS_PEMS04_12_FEDformer*",
+   "note": "Nonstationary competitive; Autoformer/FEDformer poor. SECrossformer beats all."
+  },
+  {
+   "model": "FEDformer",
+   "dataset": "PEMS04",
+   "pred_len": 24,
+   "seeds_mse": [
+    0.1094,
+    0.1108,
+    0.1113
+   ],
+   "mean_mse": 0.1105,
+   "config": "canonical d256 label_len48 (decoder models)",
+   "published_reference": {
+    "value": null,
+    "source": "VERIFIED self-run (replaces borrowed S-Mamba-table rows)"
+   },
+   "box": "40230497",
+   "harvested": "2026-06-14",
+   "provenance": "metrics.npy[1] from *CLAS_PEMS04_24_FEDformer*",
+   "note": "Nonstationary competitive; Autoformer/FEDformer poor. SECrossformer beats all."
+  },
+  {
+   "model": "FEDformer",
+   "dataset": "PEMS04",
+   "pred_len": 48,
+   "seeds_mse": [
+    0.1456,
+    0.1542,
+    0.2339
+   ],
+   "mean_mse": 0.1779,
+   "config": "canonical d256 label_len48 (decoder models)",
+   "published_reference": {
+    "value": null,
+    "source": "VERIFIED self-run (replaces borrowed S-Mamba-table rows)"
+   },
+   "box": "40230497",
+   "harvested": "2026-06-14",
+   "provenance": "metrics.npy[1] from *CLAS_PEMS04_48_FEDformer*",
+   "note": "Nonstationary competitive; Autoformer/FEDformer poor. SECrossformer beats all."
+  },
+  {
+   "model": "FEDformer",
+   "dataset": "PEMS04",
+   "pred_len": 96,
+   "seeds_mse": [
+    0.2288,
+    0.4045,
+    0.2842
+   ],
+   "mean_mse": 0.3058,
+   "config": "canonical d256 label_len48 (decoder models)",
+   "published_reference": {
+    "value": null,
+    "source": "VERIFIED self-run (replaces borrowed S-Mamba-table rows)"
+   },
+   "box": "40230497",
+   "harvested": "2026-06-14",
+   "provenance": "metrics.npy[1] from *CLAS_PEMS04_96_FEDformer*",
+   "note": "Nonstationary competitive; Autoformer/FEDformer poor. SECrossformer beats all."
+  },
+  {
+   "model": "Nonstationary_Transformer",
+   "dataset": "PEMS04",
+   "pred_len": 12,
+   "seeds_mse": [
+    0.0863,
+    0.0847,
+    0.0859
+   ],
+   "mean_mse": 0.0856,
+   "config": "canonical d256 label_len48 (decoder models)",
+   "published_reference": {
+    "value": null,
+    "source": "VERIFIED self-run (replaces borrowed S-Mamba-table rows)"
+   },
+   "box": "40230497",
+   "harvested": "2026-06-14",
+   "provenance": "metrics.npy[1] from *CLAS_PEMS04_12_Nonstationary_Transformer*",
+   "note": "Nonstationary competitive; Autoformer/FEDformer poor. SECrossformer beats all."
+  },
+  {
+   "model": "Nonstationary_Transformer",
+   "dataset": "PEMS04",
+   "pred_len": 24,
+   "seeds_mse": [
+    0.1006,
+    0.1,
+    0.1017
+   ],
+   "mean_mse": 0.1008,
+   "config": "canonical d256 label_len48 (decoder models)",
+   "published_reference": {
+    "value": null,
+    "source": "VERIFIED self-run (replaces borrowed S-Mamba-table rows)"
+   },
+   "box": "40230497",
+   "harvested": "2026-06-14",
+   "provenance": "metrics.npy[1] from *CLAS_PEMS04_24_Nonstationary_Transformer*",
+   "note": "Nonstationary competitive; Autoformer/FEDformer poor. SECrossformer beats all."
+  },
+  {
+   "model": "Nonstationary_Transformer",
+   "dataset": "PEMS04",
+   "pred_len": 48,
+   "seeds_mse": [
+    0.129,
+    0.1297,
+    0.1272
+   ],
+   "mean_mse": 0.1286,
+   "config": "canonical d256 label_len48 (decoder models)",
+   "published_reference": {
+    "value": null,
+    "source": "VERIFIED self-run (replaces borrowed S-Mamba-table rows)"
+   },
+   "box": "40230497",
+   "harvested": "2026-06-14",
+   "provenance": "metrics.npy[1] from *CLAS_PEMS04_48_Nonstationary_Transformer*",
+   "note": "Nonstationary competitive; Autoformer/FEDformer poor. SECrossformer beats all."
+  },
+  {
+   "model": "Nonstationary_Transformer",
+   "dataset": "PEMS04",
+   "pred_len": 96,
+   "seeds_mse": [
+    0.182,
+    0.1862,
+    0.1832
+   ],
+   "mean_mse": 0.1838,
+   "config": "canonical d256 label_len48 (decoder models)",
+   "published_reference": {
+    "value": null,
+    "source": "VERIFIED self-run (replaces borrowed S-Mamba-table rows)"
+   },
+   "box": "40230497",
+   "harvested": "2026-06-14",
+   "provenance": "metrics.npy[1] from *CLAS_PEMS04_96_Nonstationary_Transformer*",
+   "note": "Nonstationary competitive; Autoformer/FEDformer poor. SECrossformer beats all."
   }
  ],
  "methodology_notes": [
