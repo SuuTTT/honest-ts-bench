@@ -17,16 +17,22 @@ PROBE_INTERVAL = 120  # seconds
 
 # instance -> (host, port, project, note, logfile-to-tail or None)
 BOXES = {
-    "40230626": ("ssh5.vast.ai", 30627, "struct-mamba",
-                 "PEMS04/07/08 grid", "/root/structmamba.log"),
-    "40424707": ("ssh1.vast.ai", 24707, "struct-mamba",
-                 "PEMS03 grid DONE 06-11", "/root/sm_pems03.log"),
+    "40230626": ("ssh5.vast.ai", 30627, "phase3-ECL/Traffic + SEC",
+                 "SEC PEMS03 -> ECL -> Traffic chain", "/root/sec_p03.log"),
+    "40424707": ("ssh1.vast.ai", 24707, "ts-bench-audit",
+                 "S-Mamba PEMS03 two-regime", "/root/smamba_p03.log"),
     "40230497": ("ssh8.vast.ai", 30497, "ts-bench-audit",
-                 "from mahjong 06-11", None),
-    "40121712": ("ssh2.vast.ai", 11713, "mahjong-eval + ts-bench-audit",
-                 "GPU co-tenant; mahjong CPUs until 06-14", None),
-    "22734":    ("ssh5.vast.ai", 22734, "ts-bench-audit",
-                 "FLAKY - short runs only", None),
+                 "classical baselines PEMS04", "/root/classical_p04.log"),
+    "40121712": ("ssh2.vast.ai", 11713, "ts-bench-audit",
+                 "TimesNet PEMS07 + CrossF retry", "/root/audit_P07.log"),
+    "22734":    ("ssh5.vast.ai", 22734, "phase2-SEC",
+                 "SEC PEMS07 48/96", "/root/sec_p07.log"),
+    "40230645": ("ssh1.vast.ai", 30645, "ts-bench-audit",
+                 "iT exact-script -> classical P03", "/root/itexact_p03.log"),
+    "40680574": ("ssh4.vast.ai", 10575, "phase2-SEC + phase3-Traffic",
+                 "GPU0 SEC-PEMS07, GPU1 Traffic", "/root/traffic_gpu1.log"),
+    "40924143": ("58.8.189.254", 57108, "ts-bench-audit",
+                 "added 06-14, custom endpoint, provisioning", None),
 }
 
 STATE = {"generated": None, "fleet": [], "runs": [], "queue": []}

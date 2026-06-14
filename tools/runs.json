@@ -70,6 +70,13 @@
       "what": "Traffic (N=862) Phase-3: SECrossformer + iT + CrossFormer, horizons 96/192/336/720, batch 4",
       "status": "running",
       "progress": "data converted (OT header) + masks (3,862,862); batch reduced 8->4 for 16GB; StructMamba-Traffic runs on 30627 (mamba env)"
+    },
+    {
+      "project": "phase-3-traffic",
+      "box": "40924143 (58.8.189.254:57108, 3060, shared w/ sisa_bench)",
+      "what": "Traffic (N=862) baselines: iTransformer + CrossFormer, horizons 96/192/336/720, batch 4",
+      "status": "running",
+      "progress": "added 06-14; provisioned torch2.4+deps; co-tenant nice-19 yield to sisa_bench; offloads A4000 GPU1"
     }
   ],
   "queue": [
