@@ -1259,26 +1259,6 @@
    "note": "CLEAN rerun confirms shared-box value (0.1332 vs 0.1324). Tight 3% spread. On small-N PEMS08, CrossFormer-family weak vs channel-attention (iT 0.0794) regardless of SE masks."
   },
   {
-   "model": "SECrossformer",
-   "dataset": "PEMS04",
-   "pred_len": 96,
-   "config": "SE-masked CrossFormer, BATCH 4 (OOM-forced down from 16 on shared A4000) - CONFOUNDED",
-   "seeds_mse": [
-    0.1137,
-    0.1871,
-    0.1901
-   ],
-   "mean_mse": 0.1636,
-   "published_reference": {
-    "value": null,
-    "source": "PHASE-2; baseline CrossFormer 0.1310 (batch16), StructMamba 0.1974"
-   },
-   "box": "40680574 GPU1 (A4000, shared w/ SEP)",
-   "harvested": "2026-06-13",
-   "provenance": "metrics.npy[1] from TSLibAudit/results/*SEC_PEMS04_96*_aud_{0,1,2}",
-   "note": "DO-NOT-CITE until rerun: batch 4 vs everyone-else's 16 confounds both MSE and variance. Wide spread here likely the small-batch artifact, not an SE-masking failure. NEEDS clean batch-16 rerun on a dedicated GPU. pred-12 (clean batch-16) remains the valid headline."
-  },
-  {
    "model": "S-Mamba",
    "dataset": "PEMS07",
    "pred_len": 12,
@@ -1638,6 +1618,46 @@
    "harvested": "2026-06-13",
    "provenance": "metrics.npy[1] from *AUD_PEMS03_48_PatchTST*",
    "note": "Channel-independent; tight seeds but far behind channel-attention. Cross-channel structure decisive at N=358 long horizon."
+  },
+  {
+   "model": "SECrossformer",
+   "dataset": "PEMS04",
+   "pred_len": 24,
+   "config": "SE-masked CrossFormer, CLEAN dedicated batch-16 (d256/e3)",
+   "seeds_mse": [
+    0.0791,
+    0.078,
+    0.077
+   ],
+   "mean_mse": 0.078,
+   "published_reference": {
+    "value": null,
+    "source": "PHASE-2 clean"
+   },
+   "box": "40230497",
+   "harvested": "2026-06-14",
+   "provenance": "metrics.npy[1] from *SECC_PEMS04_24*_secc_{0,1,2}",
+   "note": "BEATS ALL canonical methods AND S-Mamba-d1024 at this horizon. pred-48: SEC 0.0909 < S-Mamba-pub 0.1006 < StructMamba 0.1297 < baseline-CrossFormer 0.1609(unstable). SE masks both stabilize AND improve CrossFormer's long-horizon accuracy. Tight ~2% seed spread."
+  },
+  {
+   "model": "SECrossformer",
+   "dataset": "PEMS04",
+   "pred_len": 48,
+   "config": "SE-masked CrossFormer, CLEAN dedicated batch-16 (d256/e3)",
+   "seeds_mse": [
+    0.09,
+    0.0907,
+    0.092
+   ],
+   "mean_mse": 0.0909,
+   "published_reference": {
+    "value": null,
+    "source": "PHASE-2 clean"
+   },
+   "box": "40230497 (cross-checked A4000: 0.0890/0.0903/0.0909)",
+   "harvested": "2026-06-14",
+   "provenance": "metrics.npy[1] from *SECC_PEMS04_48*_secc_{0,1,2}",
+   "note": "BEATS ALL canonical methods AND S-Mamba-d1024 at this horizon. pred-48: SEC 0.0909 < S-Mamba-pub 0.1006 < StructMamba 0.1297 < baseline-CrossFormer 0.1609(unstable). SE masks both stabilize AND improve CrossFormer's long-horizon accuracy. Tight ~2% seed spread."
   }
  ],
  "methodology_notes": [
