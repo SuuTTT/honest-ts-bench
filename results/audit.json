@@ -1734,6 +1734,63 @@
    "harvested": "2026-06-14",
    "provenance": "metrics.npy[1] from *AUD_PEMS03_96_PatchTST*",
    "note": "Channel-independent, tight but far behind channel-attention at long horizon - PatchTST P03 grid complete."
+  },
+  {
+   "model": "PatchTST",
+   "dataset": "PEMS04",
+   "pred_len": 24,
+   "seeds_mse": [
+    0.1676,
+    0.1666,
+    0.1664
+   ],
+   "mean_mse": 0.1669,
+   "published_reference": {
+    "value": null,
+    "source": "audit gap-fill; SECrossformer 0.0780"
+   },
+   "box": "40230497 (RTX 3060)",
+   "harvested": "2026-06-14",
+   "provenance": "metrics.npy[1] from *AUD_PEMS04_24_PatchTST*",
+   "note": "Channel-independent collapses at long horizon (0.50 at pred-96) - SECrossformer 0.1087 is 4.6x better. Strongest evidence yet that cross-channel structure is essential."
+  },
+  {
+   "model": "PatchTST",
+   "dataset": "PEMS04",
+   "pred_len": 48,
+   "seeds_mse": [
+    0.2942,
+    0.2944,
+    0.2905
+   ],
+   "mean_mse": 0.293,
+   "published_reference": {
+    "value": null,
+    "source": "audit gap-fill; SECrossformer 0.0909"
+   },
+   "box": "40230497 (RTX 3060)",
+   "harvested": "2026-06-14",
+   "provenance": "metrics.npy[1] from *AUD_PEMS04_48_PatchTST*",
+   "note": "Channel-independent collapses at long horizon (0.50 at pred-96) - SECrossformer 0.1087 is 4.6x better. Strongest evidence yet that cross-channel structure is essential."
+  },
+  {
+   "model": "PatchTST",
+   "dataset": "PEMS04",
+   "pred_len": 96,
+   "seeds_mse": [
+    0.4934,
+    0.4954,
+    0.4987
+   ],
+   "mean_mse": 0.4958,
+   "published_reference": {
+    "value": null,
+    "source": "audit gap-fill; SECrossformer 0.1087"
+   },
+   "box": "40230497 (RTX 3060)",
+   "harvested": "2026-06-14",
+   "provenance": "metrics.npy[1] from *AUD_PEMS04_96_PatchTST*",
+   "note": "Channel-independent collapses at long horizon (0.50 at pred-96) - SECrossformer 0.1087 is 4.6x better. Strongest evidence yet that cross-channel structure is essential."
   }
  ],
  "methodology_notes": [
