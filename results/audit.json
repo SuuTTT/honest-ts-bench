@@ -1715,6 +1715,25 @@
    "harvested": "2026-06-14",
    "provenance": "metrics.npy[1] from *SECC_PEMS03_12*_secc_{0,1,2}",
    "note": "PEMS03 extension. Competitive (~ties StructMamba 0.0635, beats iT 0.0694), tight 4% spread."
+  },
+  {
+   "model": "PatchTST",
+   "dataset": "PEMS03",
+   "pred_len": 96,
+   "seeds_mse": [
+    0.3457,
+    0.3483,
+    0.3482
+   ],
+   "mean_mse": 0.3474,
+   "published_reference": {
+    "value": null,
+    "source": "audit; StructMamba 0.1878, iT-canonical 0.2755"
+   },
+   "box": "40230645 (P4000)",
+   "harvested": "2026-06-14",
+   "provenance": "metrics.npy[1] from *AUD_PEMS03_96_PatchTST*",
+   "note": "Channel-independent, tight but far behind channel-attention at long horizon - PatchTST P03 grid complete."
   }
  ],
  "methodology_notes": [
