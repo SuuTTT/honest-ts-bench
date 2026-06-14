@@ -2166,6 +2166,26 @@
    "harvested": "2026-06-14",
    "provenance": "metrics.npy[1] from *CLAS_PEMS04_96_Nonstationary_Transformer*",
    "note": "Nonstationary competitive; Autoformer/FEDformer poor. SECrossformer beats all."
+  },
+  {
+   "model": "SECrossformer",
+   "dataset": "PEMS03",
+   "pred_len": 48,
+   "config": "SE-masked CrossFormer, clean batch-16 (d256/e3)",
+   "seeds_mse": [
+    0.1074,
+    0.1117,
+    0.1089
+   ],
+   "mean_mse": 0.1093,
+   "published_reference": {
+    "value": null,
+    "source": "PHASE-2; StructMamba 0.1247, iT 0.1651, baseline-CrossFormer ~0.2(lottery)"
+   },
+   "box": "40230626 (RTX 3060)",
+   "harvested": "2026-06-14",
+   "provenance": "metrics.npy[1] from *SECC_PEMS03_48*_secc_{0,1,2}",
+   "note": "BEATS StructMamba 0.1247 at long horizon (crossover, as on PEMS04). pred-96 crashed CUBLAS alloc (GPU contention w/ ECL chain) - needs rerun."
   }
  ],
  "methodology_notes": [
