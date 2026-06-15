@@ -29,7 +29,7 @@ BOXES = {
                  "SEC PEMS07 48/96", "/root/sec_p07.log"),
     "40680574": ("ssh4.vast.ai", 10575, "phase2-SEC + phase3-Traffic",
                  "GPU0 SEC-PEMS07, GPU1 Traffic", "/root/traffic_gpu1.log"),
-    "40924143": ("58.8.189.254", 57108, "ts-bench-audit",
+    "40924143": ("171.101.230.180", 57108, "ts-bench-audit",
                  "added 06-14, custom endpoint, provisioning", None),
     "40230645": ("74.48.140.178", 44195, "ts-bench-audit",
                  "P4000 direct endpoint (proxy broke)", "/root/keepbusy.log"),
