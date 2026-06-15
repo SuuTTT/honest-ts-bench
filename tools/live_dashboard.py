@@ -27,12 +27,12 @@ BOXES = {
                  "TimesNet PEMS07 + CrossF retry", "/root/audit_P07.log"),
     "22734":    ("ssh5.vast.ai", 22734, "phase2-SEC",
                  "SEC PEMS07 48/96", "/root/sec_p07.log"),
-    "40230645": ("ssh1.vast.ai", 30645, "ts-bench-audit",
-                 "iT exact-script -> classical P03", "/root/itexact_p03.log"),
     "40680574": ("ssh4.vast.ai", 10575, "phase2-SEC + phase3-Traffic",
                  "GPU0 SEC-PEMS07, GPU1 Traffic", "/root/traffic_gpu1.log"),
     "40924143": ("58.8.189.254", 57108, "ts-bench-audit",
                  "added 06-14, custom endpoint, provisioning", None),
+    "40230645": ("74.48.140.178", 44195, "ts-bench-audit",
+                 "P4000 direct endpoint (proxy broke)", "/root/keepbusy.log"),
 }
 
 STATE = {"generated": None, "fleet": [], "runs": [], "queue": []}

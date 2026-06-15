@@ -2338,6 +2338,26 @@
    "box": "40424707",
    "harvested": "2026-06-15",
    "provenance": "metrics.npy[1] from SDMamba/results/SMPUB_P03_96_*"
+  },
+  {
+   "model": "SECrossformer",
+   "dataset": "PEMS07",
+   "pred_len": 24,
+   "config": "SE-masked CrossFormer, batch-8 (d256/e3)",
+   "seeds_mse": [
+    0.0941,
+    0.0916,
+    0.0826
+   ],
+   "mean_mse": 0.0894,
+   "published_reference": {
+    "value": null,
+    "source": "PHASE-2; StructMamba 0.0817, MultiRel 0.0890, iT 0.0969"
+   },
+   "box": "40680574 GPU0 (A4000)",
+   "harvested": "2026-06-15",
+   "provenance": "metrics.npy[1] from *SECC_PEMS07_24*_secc_{0,1,2}",
+   "note": "At N=883 SEC trails StructMamba (0.0817) - opposite of PEMS04. Pattern: SEC wins mid-N (PEMS04), StructMamba wins large-N (PEMS07). Honest split."
   }
  ],
  "methodology_notes": [
