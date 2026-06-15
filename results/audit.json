@@ -2398,6 +2398,246 @@
    "harvested": "2026-06-15",
    "provenance": "metrics.npy[1] from *TRsm_96*",
    "note": "FIRST Traffic (N=862) Phase-3 result."
+  },
+  {
+   "model": "FEDformer",
+   "dataset": "PEMS08",
+   "pred_len": 12,
+   "seeds_mse": [
+    0.1608,
+    0.1591,
+    0.1599
+   ],
+   "mean_mse": 0.1599,
+   "config": "canonical (decoder models label_len48)",
+   "published_reference": {
+    "value": null,
+    "source": "verified self-run baseline (PEMS08)"
+   },
+   "box": "40230497 (direct ep)",
+   "harvested": "2026-06-15",
+   "provenance": "metrics.npy[1] from *KB_PEMS08_12_FEDformer*",
+   "note": "PEMS08 baseline. SEC P08 (0.1332/0.1601/0.1860/0.2166) and StructMamba beat all these."
+  },
+  {
+   "model": "Nonstationary_Transformer",
+   "dataset": "PEMS08",
+   "pred_len": 12,
+   "seeds_mse": [
+    0.1082,
+    0.1069,
+    0.1055
+   ],
+   "mean_mse": 0.1069,
+   "config": "canonical (decoder models label_len48)",
+   "published_reference": {
+    "value": null,
+    "source": "verified self-run baseline (PEMS08)"
+   },
+   "box": "40230497 (direct ep)",
+   "harvested": "2026-06-15",
+   "provenance": "metrics.npy[1] from *KB_PEMS08_12_Nonstationary_Transformer*",
+   "note": "PEMS08 baseline. SEC P08 (0.1332/0.1601/0.1860/0.2166) and StructMamba beat all these."
+  },
+  {
+   "model": "PatchTST",
+   "dataset": "PEMS08",
+   "pred_len": 12,
+   "seeds_mse": [
+    0.1024,
+    0.1009,
+    0.1008
+   ],
+   "mean_mse": 0.1014,
+   "config": "canonical d256",
+   "published_reference": {
+    "value": null,
+    "source": "verified self-run baseline (PEMS08)"
+   },
+   "box": "40230497 (direct ep)",
+   "harvested": "2026-06-15",
+   "provenance": "metrics.npy[1] from *KB_PEMS08_12_PatchTST*",
+   "note": "PEMS08 baseline. SEC P08 (0.1332/0.1601/0.1860/0.2166) and StructMamba beat all these."
+  },
+  {
+   "model": "FEDformer",
+   "dataset": "PEMS08",
+   "pred_len": 24,
+   "seeds_mse": [
+    0.1891,
+    0.1895,
+    0.191
+   ],
+   "mean_mse": 0.1899,
+   "config": "canonical (decoder models label_len48)",
+   "published_reference": {
+    "value": null,
+    "source": "verified self-run baseline (PEMS08)"
+   },
+   "box": "40230497 (direct ep)",
+   "harvested": "2026-06-15",
+   "provenance": "metrics.npy[1] from *KB_PEMS08_24_FEDformer*",
+   "note": "PEMS08 baseline. SEC P08 (0.1332/0.1601/0.1860/0.2166) and StructMamba beat all these."
+  },
+  {
+   "model": "Nonstationary_Transformer",
+   "dataset": "PEMS08",
+   "pred_len": 24,
+   "seeds_mse": [
+    0.1428,
+    0.1384,
+    0.1414
+   ],
+   "mean_mse": 0.1409,
+   "config": "canonical (decoder models label_len48)",
+   "published_reference": {
+    "value": null,
+    "source": "verified self-run baseline (PEMS08)"
+   },
+   "box": "40230497 (direct ep)",
+   "harvested": "2026-06-15",
+   "provenance": "metrics.npy[1] from *KB_PEMS08_24_Nonstationary_Transformer*",
+   "note": "PEMS08 baseline. SEC P08 (0.1332/0.1601/0.1860/0.2166) and StructMamba beat all these."
+  },
+  {
+   "model": "PatchTST",
+   "dataset": "PEMS08",
+   "pred_len": 24,
+   "seeds_mse": [
+    0.1585,
+    0.1599,
+    0.1597
+   ],
+   "mean_mse": 0.1594,
+   "config": "canonical d256",
+   "published_reference": {
+    "value": null,
+    "source": "verified self-run baseline (PEMS08)"
+   },
+   "box": "40230497 (direct ep)",
+   "harvested": "2026-06-15",
+   "provenance": "metrics.npy[1] from *KB_PEMS08_24_PatchTST*",
+   "note": "PEMS08 baseline. SEC P08 (0.1332/0.1601/0.1860/0.2166) and StructMamba beat all these."
+  },
+  {
+   "model": "FEDformer",
+   "dataset": "PEMS08",
+   "pred_len": 48,
+   "seeds_mse": [
+    0.2786,
+    0.289,
+    0.3151
+   ],
+   "mean_mse": 0.2942,
+   "config": "canonical (decoder models label_len48)",
+   "published_reference": {
+    "value": null,
+    "source": "verified self-run baseline (PEMS08)"
+   },
+   "box": "40230497 (direct ep)",
+   "harvested": "2026-06-15",
+   "provenance": "metrics.npy[1] from *KB_PEMS08_48_FEDformer*",
+   "note": "PEMS08 baseline. SEC P08 (0.1332/0.1601/0.1860/0.2166) and StructMamba beat all these."
+  },
+  {
+   "model": "Nonstationary_Transformer",
+   "dataset": "PEMS08",
+   "pred_len": 48,
+   "seeds_mse": [
+    0.2033,
+    0.1956,
+    0.2012
+   ],
+   "mean_mse": 0.2,
+   "config": "canonical (decoder models label_len48)",
+   "published_reference": {
+    "value": null,
+    "source": "verified self-run baseline (PEMS08)"
+   },
+   "box": "40230497 (direct ep)",
+   "harvested": "2026-06-15",
+   "provenance": "metrics.npy[1] from *KB_PEMS08_48_Nonstationary_Transformer*",
+   "note": "PEMS08 baseline. SEC P08 (0.1332/0.1601/0.1860/0.2166) and StructMamba beat all these."
+  },
+  {
+   "model": "PatchTST",
+   "dataset": "PEMS08",
+   "pred_len": 48,
+   "seeds_mse": [
+    0.2648,
+    0.2724,
+    0.2715
+   ],
+   "mean_mse": 0.2696,
+   "config": "canonical d256",
+   "published_reference": {
+    "value": null,
+    "source": "verified self-run baseline (PEMS08)"
+   },
+   "box": "40230497 (direct ep)",
+   "harvested": "2026-06-15",
+   "provenance": "metrics.npy[1] from *KB_PEMS08_48_PatchTST*",
+   "note": "PEMS08 baseline. SEC P08 (0.1332/0.1601/0.1860/0.2166) and StructMamba beat all these."
+  },
+  {
+   "model": "FEDformer",
+   "dataset": "PEMS08",
+   "pred_len": 96,
+   "seeds_mse": [
+    0.4575,
+    0.446,
+    0.4336
+   ],
+   "mean_mse": 0.4457,
+   "config": "canonical (decoder models label_len48)",
+   "published_reference": {
+    "value": null,
+    "source": "verified self-run baseline (PEMS08)"
+   },
+   "box": "40230497 (direct ep)",
+   "harvested": "2026-06-15",
+   "provenance": "metrics.npy[1] from *KB_PEMS08_96_FEDformer*",
+   "note": "PEMS08 baseline. SEC P08 (0.1332/0.1601/0.1860/0.2166) and StructMamba beat all these."
+  },
+  {
+   "model": "Nonstationary_Transformer",
+   "dataset": "PEMS08",
+   "pred_len": 96,
+   "seeds_mse": [
+    0.3214,
+    0.3024,
+    0.3208
+   ],
+   "mean_mse": 0.3149,
+   "config": "canonical (decoder models label_len48)",
+   "published_reference": {
+    "value": null,
+    "source": "verified self-run baseline (PEMS08)"
+   },
+   "box": "40230497 (direct ep)",
+   "harvested": "2026-06-15",
+   "provenance": "metrics.npy[1] from *KB_PEMS08_96_Nonstationary_Transformer*",
+   "note": "PEMS08 baseline. SEC P08 (0.1332/0.1601/0.1860/0.2166) and StructMamba beat all these."
+  },
+  {
+   "model": "PatchTST",
+   "dataset": "PEMS08",
+   "pred_len": 96,
+   "seeds_mse": [
+    0.4429,
+    0.4438,
+    0.4405
+   ],
+   "mean_mse": 0.4424,
+   "config": "canonical d256",
+   "published_reference": {
+    "value": null,
+    "source": "verified self-run baseline (PEMS08)"
+   },
+   "box": "40230497 (direct ep)",
+   "harvested": "2026-06-15",
+   "provenance": "metrics.npy[1] from *KB_PEMS08_96_PatchTST*",
+   "note": "PEMS08 baseline. SEC P08 (0.1332/0.1601/0.1860/0.2166) and StructMamba beat all these."
   }
  ],
  "methodology_notes": [
