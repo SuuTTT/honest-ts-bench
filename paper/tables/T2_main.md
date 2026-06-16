@@ -48,10 +48,16 @@
 ## ECL (Phase-3, horizons 96/192/336/720)
 | Model | 96 | 192 | 336 | 720 |
 |---|---|---|---|---|
+| Crossformer | 0.1507 | 0.1622 | — | — |
+| iTransformer | 0.1477 | 0.1653 | 0.1769 | 0.2123 |
+| MultiRel | — | 0.1630 | 0.1811 | — |
 | StructMamba | 0.1411 | 0.1643 | 0.1868 | — |
 | SECrossformer | 0.1675 | — | — | — |
 
 ## Traffic (Phase-3, horizons 96/192/336/720)
 | Model | 96 | 192 | 336 | 720 |
 |---|---|---|---|---|
+| Crossformer | 0.7020 | — | — | — |
+| iTransformer | 0.3961 | 0.4158 | 0.4283 | 0.4580 |
 | StructMamba | 0.4246 | — | — | — |
+| SECrossformer | 0.5564 | — | — | — |
