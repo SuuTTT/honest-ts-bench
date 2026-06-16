@@ -2658,6 +2658,82 @@
    "harvested": "2026-06-15",
    "provenance": "metrics.npy[1] from *SECC_PEMS07_48*",
    "note": "SEC trails StructMamba 0.1185 at N=883 (large-N -> StructMamba wins, consistent). pred-96 OOM on 8GB 3070, queued for 16GB box."
+  },
+  {
+   "model": "SECrossformer",
+   "dataset": "ECL",
+   "pred_len": 96,
+   "seeds_mse": [
+    0.1696,
+    0.1674,
+    0.1654
+   ],
+   "mean_mse": 0.1675,
+   "config": "PHASE-3 (d256/e3)",
+   "published_reference": {
+    "value": null,
+    "source": "Phase-3 ECL generalization. Paper iT=0.1506/MultiRel=0.1448 at pred-96."
+   },
+   "box": "40230626",
+   "harvested": "2026-06-16",
+   "provenance": "metrics.npy[1] from *ECLsec_96*"
+  },
+  {
+   "model": "StructMamba",
+   "dataset": "ECL",
+   "pred_len": 192,
+   "seeds_mse": [
+    0.1651,
+    0.1632,
+    0.1645
+   ],
+   "mean_mse": 0.1643,
+   "config": "PHASE-3 (d256/e3)",
+   "published_reference": {
+    "value": null,
+    "source": "Phase-3 ECL generalization. Paper iT=0.1506/MultiRel=0.1448 at pred-96."
+   },
+   "box": "40230626",
+   "harvested": "2026-06-16",
+   "provenance": "metrics.npy[1] from *ECLsm_192*"
+  },
+  {
+   "model": "StructMamba",
+   "dataset": "ECL",
+   "pred_len": 336,
+   "seeds_mse": [
+    0.1868,
+    0.1851,
+    0.1886
+   ],
+   "mean_mse": 0.1868,
+   "config": "PHASE-3 (d256/e3)",
+   "published_reference": {
+    "value": null,
+    "source": "Phase-3 ECL generalization. Paper iT=0.1506/MultiRel=0.1448 at pred-96."
+   },
+   "box": "40230626",
+   "harvested": "2026-06-16",
+   "provenance": "metrics.npy[1] from *ECLsm_336*"
+  },
+  {
+   "model": "StructMamba",
+   "dataset": "ECL",
+   "pred_len": 96,
+   "seeds_mse": [
+    0.1418,
+    0.1407,
+    0.1407
+   ],
+   "mean_mse": 0.1411,
+   "config": "PHASE-3 (d256/e3)",
+   "published_reference": {
+    "value": null,
+    "source": "ECL pred-96: StructMamba 0.1411 BEATS paper iT 0.1506 & MultiRel 0.1448 - SE structure generalizes to electricity."
+   },
+   "box": "40230626",
+   "harvested": "2026-06-16",
+   "provenance": "metrics.npy[1] from *ECLsm_96*"
   }
  ],
  "methodology_notes": [
