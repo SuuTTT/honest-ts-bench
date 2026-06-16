@@ -2734,6 +2734,66 @@
    "box": "40230626",
    "harvested": "2026-06-16",
    "provenance": "metrics.npy[1] from *ECLsm_96*"
+  },
+  {
+   "model": "iTransformer",
+   "dataset": "ECL",
+   "pred_len": 96,
+   "seeds_mse": [
+    0.1479,
+    0.1478,
+    0.1473
+   ],
+   "mean_mse": 0.1477,
+   "config": "PHASE-3 canonical (d256/e3)",
+   "published_reference": {
+    "value": null,
+    "source": "Phase-3 ECL baseline; StructMamba 0.1411 beats"
+   },
+   "box": "40424707",
+   "harvested": "2026-06-16",
+   "provenance": "metrics.npy[1] from *ECLb_iTransformer_96*",
+   "note": "ECL iT baseline (paper iT-96=0.1506; this run 0.1477)."
+  },
+  {
+   "model": "iTransformer",
+   "dataset": "ECL",
+   "pred_len": 192,
+   "seeds_mse": [
+    0.1646,
+    0.1657,
+    0.1656
+   ],
+   "mean_mse": 0.1653,
+   "config": "PHASE-3 canonical (d256/e3)",
+   "published_reference": {
+    "value": null,
+    "source": "Phase-3 ECL baseline; StructMamba 0.1643 beats"
+   },
+   "box": "40424707",
+   "harvested": "2026-06-16",
+   "provenance": "metrics.npy[1] from *ECLb_iTransformer_192*",
+   "note": "ECL iT baseline (paper iT-96=0.1506; this run 0.1477)."
+  },
+  {
+   "model": "iTransformer",
+   "dataset": "ECL",
+   "pred_len": 336,
+   "seeds_mse": [
+    0.1779,
+    0.176,
+    0.1767
+   ],
+   "mean_mse": 0.1769,
+   "config": "PHASE-3 canonical (d256/e3)",
+   "published_reference": {
+    "value": null,
+    "source": "Phase-3 ECL baseline; StructMamba 0.1868 beats"
+   },
+   "box": "40424707",
+   "harvested": "2026-06-16",
+   "provenance": "metrics.npy[1] from *ECLb_iTransformer_336*",
+   "note": "ECL iT baseline (paper iT-96=0.1506; this run 0.1477)."
   }
  ],
  "methodology_notes": [
